@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Imei : NSObject
--(NSString*)getImei;
+-(NSString*)getImei:(int)idx;
+-(NSString*)getImeiAsync:(int)idx useCb:(BLOCKDEF_IMEI_ASYNC)callback;
 @end
+
 
 NS_ASSUME_NONNULL_END

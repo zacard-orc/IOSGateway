@@ -7,7 +7,7 @@ DEPENDENCIES:
   - QJRouter (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - MJExtension
 
 EXTERNAL SOURCES:
@@ -18,6 +18,6 @@ SPEC CHECKSUMS:
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   QJRouter: 73581e6a983c66dc05ace6e2fc47d93222178a5f
 
-PODFILE CHECKSUM: 8f9bd8edd62042e23b66c8127477d3b460f16369
+PODFILE CHECKSUM: 32c6bb897a842056a71da45f5417b1b1378a1d15
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

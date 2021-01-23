@@ -9,7 +9,18 @@
 #import "Imei.h"
 
 @implementation Imei
--(NSString*)getImei{
-    return @"23992-23902322-2939232-9999";
+-(NSString*)getImei:(int)idx{
+    if(idx==0){
+        return @"aaaa-23902322-2939232-9999";
+    } else if (idx==1){
+        return @"bbbb-23902322-2939232-9999";
+    } else{
+        return @"cccc-23902322-2939232-9999";
+    }
+}
+
+-(NSString*)getImeiAsync:(int)idx useCb:(BLOCKDEF_IMEI_ASYNC)callback{
+    callback(@"usecb-cccc-23902322-2939232-9999");
+    return @"getImeiAsync usecb";
 }
 @end

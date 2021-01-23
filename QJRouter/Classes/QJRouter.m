@@ -12,7 +12,6 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
 
 @interface QJRouter()
 @property (nonatomic, strong) NSMutableDictionary *cachedTarget;
-
 @end
 
 @implementation QJRouter
@@ -27,15 +26,10 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     return router;
 }
 
-- (void)setTargetArray:(NSArray *)targetArray {
-    _targetArray = targetArray;
+- (void)setAtomArray:(NSArray *)atomArray {
+    _atomArray = atomArray;
     [self initializeRouteMap];
 }
-
-//- (void)setAtom:(NSArray *)atomArray {
-//    _atomArray = atomArray;
-//    [self initializeRouteMap];
-//}
 /*
  scheme://[target]/[action]?[params]
  url sample:
@@ -69,7 +63,7 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     return result;
 }
 
-- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(id)params shouldCacheTarget:(BOOL)shouldCacheTarget
 {
     NSString *swiftModuleName = params[GMRouterParamsKeySwiftTargetModuleName];
     

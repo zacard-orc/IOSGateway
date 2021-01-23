@@ -20,6 +20,9 @@ extern NSString * const GMRouterParamsKeySwiftTargetModuleName;
 @property (nonatomic, copy) NSArray *componentArray;
 @property (nonatomic, copy) NSArray *sceneArray;
 
+@property (nonatomic, retain) NSMutableDictionary *boneMap;
+//static NSMutableDictionary *boneMap = nil;
+
 
 //- (void)setAtom:(NSArray *)atomArray;
 
@@ -27,7 +30,9 @@ extern NSString * const GMRouterParamsKeySwiftTargetModuleName;
 - (id)performActionWithUrl:(NSURL *)url completion:(void(^)(NSDictionary *info))completion;
 
 // 本地组件调用入口
-- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget;
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params
+              useCb:(nullable id)callback
+  shouldCacheTarget:(BOOL)shouldCacheTarget;
 - (void)releaseCachedTargetWithTargetName:(NSString *)targetName;
 
 @end

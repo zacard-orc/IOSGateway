@@ -11,8 +11,10 @@
 #include <Foundation/Foundation.h>
 
 typedef NSString *_Nullable(^BLOCKDEF_IMEI)(int);
+typedef void *_Nullable(^BLOCKDEF_IMEI_ASYNC)(NSString *_Nullable);
 typedef NSString *_Nullable(^BLOCKDEF_TIME)(NSString*_Nullable,int);
-typedef NSString *_Nullable(^BLOCKDEF_USERINFO)(NSString*);
+typedef NSString *_Nullable(^BLOCKDEF_USERINFO)(NSString*_Nullable);
+
 
 #endif /* types_h */
 
