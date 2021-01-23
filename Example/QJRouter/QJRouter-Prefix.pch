@@ -1,0 +1,47 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#include "types.h"
+
+#ifdef __OBJC__
+    @import UIKit;
+    @import Foundation;
+#endif
+
+#import <Foundation/Foundation.h>
+@import Foundation.NSDate;
+@import Foundation.NSDateFormatter;
+
+static void z_DebugLog(const char* file,int line, const char* func, NSString *statement) {
+    static NSDateFormatter *timeStampFormat;
+    if (!timeStampFormat) {
+        timeStampFormat = [[NSDateFormatter alloc] init];
+        [timeStampFormat setDateFormat:@"HH:mm:ss.SSS"];
+        [timeStampFormat setTimeZone:[NSTimeZone systemTimeZone]];
+    }
+    
+    fprintf(stderr,"%s [%s:%d] %s : %s\n",
+            [[timeStampFormat stringFromDate:[NSDate date]] UTF8String],
+            [[[NSString stringWithUTF8String:file] lastPathComponent] UTF8String],
+            line,
+            func,
+            [statement UTF8String]
+            );
+}
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) z_DebugLog(__FILE__,__LINE__,__func__,[NSString stringWithFormat:FORMAT, ##__VA_ARGS__]);
+#else
+#define NSLog(...);
+#endif
+
+
