@@ -38,7 +38,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,7 +73,17 @@
         [self alert:imei];
     } else if (indexPath.row == 1) {
 //        [QJRouter.sharedInstance pushScheme:@"qj://push_b?title=跳转A&name=我是A"];
-        [QJRouter.sharedInstance post:@"qj://atom/OpsTime/getTime" withParam:nil useCb:nil];
+//        [QJRouter.sharedInstance post:@"qj://atom/OpsTime/getTime" withParam:nil useCb:nil];
+        
+        void *func = (__bridge void*)^(NSString *msg){
+            NSLog(@"cb ret = %@", msg);
+            [self alert:msg];
+        };
+        NSString *imei = [QJRouter.sharedInstance
+                          post:@"qj://atom/Imei/getImeiAsync"
+                          withParam:[NSNumber numberWithInteger:1]
+                          useCb:(__bridge id)func
+                          ];
     } else {
         
     }

@@ -8,6 +8,7 @@
 #import "QJRouter.h"
 #import "QJRouter+gm.h"
 #import "QJCommon.h"
+#import <objc/runtime.h>
 
 NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwiftTargetModuleName";
 
@@ -88,7 +89,7 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     }
     
     if ([target respondsToSelector:action]) {
-        return [self safePerformAction:action target:target params:params useCb:nil];
+        return [self safePerformAction:action target:target params:params useCb:callback];
     } else {
         // 这里是处理无响应请求的地方，如果无响应，则尝试调用对应target的notFound方法统一处理
 //        SEL action = NSSelectorFromString(@"notFound:");
@@ -132,8 +133,13 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     }
     
     const char* retType = [methodSig methodReturnType];
+    Method runMethod = class_getInstanceMethod([target class], action);
+    int arguments = method_getNumberOfArguments(runMethod);
     
-    NSLog(@"entype = %s",@encode(NSString*));
+    NSString *selString = NSStringFromSelector(action);
+    NSString *cbStr = @"useCb";
+   
+    NSLog(@"entype = %s, argcount = %d",@encode(NSString*),arguments);
 //    if (strcmp(retType, @encode(void)) == 0)
 //        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
 //        [invocation setArgument:&params atIndex:2];
@@ -147,6 +153,11 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
         [invocation setTarget:target];
         [invocation setSelector:action];
         [invocation setArgument:&params atIndex:2];
+        //todo 很多判断
+        if ([selString containsString:cbStr]) {
+            [invocation setArgument:&callback atIndex:3];
+            NSLog(@"add argu callback");
+        }
         [invocation invoke];
         NSString *result;
         [invocation getReturnValue:&result];

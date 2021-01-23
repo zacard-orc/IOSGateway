@@ -69,12 +69,12 @@ static NSMutableDictionary *routeMap = nil;
         SEL methodSEL = method_getName(methods[i]);
         const char *methodName = sel_getName(methodSEL);
         
-//        dict[[NSString stringWithUTF8String:methodName]] = targetValue;
-
+        //        dict[[NSString stringWithUTF8String:methodName]] = targetValue;
+        
         NSString *fullName = [NSString stringWithUTF8String:methodName];
         NSString *boneName = fullName;
         
-
+        
         //获取到的是这样的 pushToHospitalDetail: 因此要去掉：
         NSString *rangeStr = @":";
         if ([fullName containsString:rangeStr]) {
@@ -85,12 +85,12 @@ static NSMutableDictionary *routeMap = nil;
         if(boneMap==nil){
             boneMap =  [[NSMutableDictionary alloc] init];
         }
-//        self.boneMap[boneName]=fullName;
+        //        self.boneMap[boneName]=fullName;
         [boneMap setValue:fullName forKey:boneName];
         
         self.boneMap = boneMap;
         NSLog(@"%@",self.boneMap);
-
+        
         NSString *cbStr = @"useCb";
         if ([fullName containsString:cbStr]) {
             NSLog(@"reg[callback]: %@ => %@",clsStr, boneName);
@@ -102,12 +102,12 @@ static NSMutableDictionary *routeMap = nil;
 //        int arguments = method_getNumberOfArguments(methods[i]);
         
         
-
-//        NSString *promoteStr = [NSString stringWithFormat:@"%@-内有重复的方法名-%@", clsStr, name];
-//        NSAssert(![dict.allKeys containsObject:name], promoteStr);
+        
+        //        NSString *promoteStr = [NSString stringWithFormat:@"%@-内有重复的方法名-%@", clsStr, name];
+        //        NSAssert(![dict.allKeys containsObject:name], promoteStr);
         
         //因为消息发送的时候会有两个默认的参数（消息接受者和方法名），所以需要减去2
-//        NSLog(@"reg: %@ => %@",clsStr, name);
+        //        NSLog(@"reg: %@ => %@",clsStr, name);
         dict[boneName] = targetValue;
     }
     
@@ -129,47 +129,47 @@ static NSMutableDictionary *routeMap = nil;
 - (id)performAction:(NSString *)actionName dstSel:(NSString *)dstSelName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget{
     
     return nil;
-//    Class class = NSClassFromString(actionName);
-//    SEL sel = NSSelectorFromString(dstSelName);
-//    IMP imp = [class instanceMethodForSelector:sel];
-//    if (!imp || imp == _objc_msgForward) {
-//        imp = [class methodForSelector:sel];
-//    }
-//    SEL selector = NSSelectorFromString(enActionFuncName(actionName));
-//
-//    Class targetCls = NSClassFromString([NSString stringWithFormat:@"%@%@",GMRouterTargetPrefix,GMRouterTargetCommons]);
-//
-//    if (!class_respondsToSelector(targetCls, selector)) {
-//        BOOL flag = class_addMethod(targetCls, selector, imp, "@@:@");
-//        if (!flag) {
-//            return nil;
-//        }
-//    }
-//
-//    id action = [self performTarget:GMRouterTargetCommons action:actionName params:params shouldCacheTarget:shouldCacheTarget];
-//    if (![action isKindOfClass:class]) {
-//
-//        Class class = NSClassFromString(@"ErrorViewController");
-//        UIViewController *vc = [[class alloc] init];
-//        return vc;
-//    }else {
-//        return [action isKindOfClass:class] ? action : nil;
-//    }
+    //    Class class = NSClassFromString(actionName);
+    //    SEL sel = NSSelectorFromString(dstSelName);
+    //    IMP imp = [class instanceMethodForSelector:sel];
+    //    if (!imp || imp == _objc_msgForward) {
+    //        imp = [class methodForSelector:sel];
+    //    }
+    //    SEL selector = NSSelectorFromString(enActionFuncName(actionName));
+    //
+    //    Class targetCls = NSClassFromString([NSString stringWithFormat:@"%@%@",GMRouterTargetPrefix,GMRouterTargetCommons]);
+    //
+    //    if (!class_respondsToSelector(targetCls, selector)) {
+    //        BOOL flag = class_addMethod(targetCls, selector, imp, "@@:@");
+    //        if (!flag) {
+    //            return nil;
+    //        }
+    //    }
+    //
+    //    id action = [self performTarget:GMRouterTargetCommons action:actionName params:params shouldCacheTarget:shouldCacheTarget];
+    //    if (![action isKindOfClass:class]) {
+    //
+    //        Class class = NSClassFromString(@"ErrorViewController");
+    //        UIViewController *vc = [[class alloc] init];
+    //        return vc;
+    //    }else {
+    //        return [action isKindOfClass:class] ? action : nil;
+    //    }
 }
 
 - (id)pushScheme:(NSString *)urlScheme {
-//    NSString *encodeUrlScheme = [self URLEncodeString:urlScheme];
-//    NSURL *url = [NSURL URLWithString:encodeUrlScheme];
-//    if (!url) {
-//        //        debugLog(@"协议出错了!");
-//    }
-//    NSString *host = url.host;
-//    NSString *targetName = [routeMap objectForKey:host];
-//    NSDictionary *params = [self getParams:encodeUrlScheme withHost:host];
-//
-//    host = [self getHostWithEncodeUrlScheme:encodeUrlScheme host:host];
-//    id vc = [self performTarget:targetName action:host params:params shouldCacheTarget:NO];
-//    return vc;
+    //    NSString *encodeUrlScheme = [self URLEncodeString:urlScheme];
+    //    NSURL *url = [NSURL URLWithString:encodeUrlScheme];
+    //    if (!url) {
+    //        //        debugLog(@"协议出错了!");
+    //    }
+    //    NSString *host = url.host;
+    //    NSString *targetName = [routeMap objectForKey:host];
+    //    NSDictionary *params = [self getParams:encodeUrlScheme withHost:host];
+    //
+    //    host = [self getHostWithEncodeUrlScheme:encodeUrlScheme host:host];
+    //    id vc = [self performTarget:targetName action:host params:params shouldCacheTarget:NO];
+    //    return vc;
     return nil;
 }
 
@@ -183,14 +183,14 @@ static NSMutableDictionary *routeMap = nil;
     }
     NSString *layer = url.host;
     NSString *path = url.relativePath; // path = /Imei/getImei /${Class}/${method}
-
+    
     NSLog(@"type nsnumber %d", [params isKindOfClass:[NSNumber class]]);
     NSLog(@"type nsstring %d", [params isKindOfClass:[NSString class]]);
-
+    
     NSArray *pathArr = [path componentsSeparatedByString:@"/"];
     NSString *clsString = [pathArr objectAtIndex:1];
     NSString *method = [pathArr objectAtIndex:2];
-
+    
     id ret;
     if([layer isEqualToString:@"atom"]){
         ret = [self performTarget:clsString
@@ -232,16 +232,16 @@ static NSMutableDictionary *routeMap = nil;
 
 - (id)pushScheme:(NSString *)urlScheme params:(NSDictionary *)params {
     return nil;
-//    NSString *encodeUrlScheme = [self URLEncodeString:urlScheme];
-//    NSURL *url = [NSURL URLWithString:encodeUrlScheme];
-//    if (!url) {
-//        //        debugLog(@"协议出错了!");
-//    }
-//    NSString *host = url.host;
-//    NSString *targetName = [routeMap objectForKey:host];
-//    NSDictionary *paramsDict = [self getParams:encodeUrlScheme withHost:host];
-//    host = [self getHostWithEncodeUrlScheme:encodeUrlScheme host:host];
-//    return [self performTarget:targetName action:host params:paramsDict shouldCacheTarget:NO];
+    //    NSString *encodeUrlScheme = [self URLEncodeString:urlScheme];
+    //    NSURL *url = [NSURL URLWithString:encodeUrlScheme];
+    //    if (!url) {
+    //        //        debugLog(@"协议出错了!");
+    //    }
+    //    NSString *host = url.host;
+    //    NSString *targetName = [routeMap objectForKey:host];
+    //    NSDictionary *paramsDict = [self getParams:encodeUrlScheme withHost:host];
+    //    host = [self getHostWithEncodeUrlScheme:encodeUrlScheme host:host];
+    //    return [self performTarget:targetName action:host params:paramsDict shouldCacheTarget:NO];
 }
 
 #pragma mark - string to dict
