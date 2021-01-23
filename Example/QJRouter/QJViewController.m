@@ -44,11 +44,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"🍔 Atom： Imei";
+        cell.textLabel.text = @"🍔 Atom： Imei(arg)";
     } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"🍔 Atom： ImeiAsync";
+        cell.textLabel.text = @"🍔 Atom： ImeiAsync(arg+block)";
     } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"🍔 Atom： OpsTime";
+        cell.textLabel.text = @"🍔 Atom： OpsTime(noarg)";
     } else if (indexPath.row == 3) {
         cell.textLabel.text = @"📕 Basic： UserInfo";
     } else if (indexPath.row == 4) {
@@ -72,18 +72,18 @@
         NSLog(@"ret imei = %@",imei);
         [self alert:imei];
     } else if (indexPath.row == 1) {
-//        [QJRouter.sharedInstance pushScheme:@"qj://push_b?title=跳转A&name=我是A"];
-//        [QJRouter.sharedInstance post:@"qj://atom/OpsTime/getTime" withParam:nil useCb:nil];
-        
-        void *func = (__bridge void*)^(NSString *msg){
-            NSLog(@"cb ret = %@", msg);
-            [self alert:msg];
-        };
-        NSString *imei = [QJRouter.sharedInstance
-                          post:@"qj://atom/Imei/getImeiAsync"
-                          withParam:[NSNumber numberWithInteger:1]
-                          useCb:(__bridge id)func
-                          ];
+//        void *func = (__bridge void*)^(NSString *msg){
+//            NSLog(@"cb ret = %@", msg);
+//            [self alert:msg];
+//        };
+        [QJRouter.sharedInstance
+                  post:@"qj://atom/Imei/getImeiAsync"
+                  withParam:[NSNumber numberWithInteger:1]
+                  useCb:(__bridge id)(__bridge void*)^(NSString *msg){
+                      NSLog(@"cb ret = %@", msg);
+                      [self alert:msg];
+                  }
+                ];
     } else {
         
     }
