@@ -4,7 +4,10 @@
 基于runtime和约定进行了修改。
 按atom、basic、component、scene进行了分层
 
-这仅仅是一个demo参考，如需生产请加入更多robust
+这仅仅是一个play demo参考，如需生产请加入更多robust。
+
+Attention！！
+It's only a play demo, u should add more robust when used in production.
 ```
 
 <img src="ReadDemo.jpg" width="30%"/>
