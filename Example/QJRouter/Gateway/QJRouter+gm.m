@@ -30,21 +30,32 @@ static NSMutableDictionary *routeMap = nil;
 
 @implementation QJRouter (gm)
 
-- (void)initializeRouteMap {
-    if (routeMap) {
-        [routeMap removeAllObjects];
-    } else {
+- (void)initializeRouteMap:(NSArray*)arr {
+    if (routeMap==nil) {
         routeMap = [[NSMutableDictionary alloc] initWithCapacity:50];
     }
-    NSArray *arr = self.atomArray;
+//    NSArray *arr = self.atomArray;
     if (!arr) {
-        NSLog(@"error");
+        NSLog(@"error array");
         return;
     }
-    for (NSString *clsStr in self.atomArray) {
+    for (NSString *clsStr in arr) {
         NSDictionary *dict = [self getMethods:clsStr];
         [routeMap addEntriesFromDictionary:dict];
     }
+    
+//    NSArray *arr2 = self.basicArray;
+//    if (!arr2) {
+//        NSLog(@"error basic array");
+//        return;
+//    }
+//    for (NSString *clsStr in self.basicArray) {
+//        NSDictionary *dict = [self getMethods:clsStr];
+//        [routeMap addEntriesFromDictionary:dict];
+//    }
+    
+    
+    
 }
 
 
@@ -55,7 +66,7 @@ static NSMutableDictionary *routeMap = nil;
     NSRange range = [clsStr rangeOfString:@"Target_"];
     NSString *targetValue =  [clsStr substringFromIndex:range.length];
     
-    NSAssert(targetValue.length != 0, @"Target_后不能为空！请注意Target");
+//    NSAssert(targetValue.length != 0, @"Target_后不能为空！请注意Target");
     
     unsigned int count = 0;
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -68,6 +79,8 @@ static NSMutableDictionary *routeMap = nil;
         // 获取方法 Name
         SEL methodSEL = method_getName(methods[i]);
         const char *methodName = sel_getName(methodSEL);
+        
+
         
         //        dict[[NSString stringWithUTF8String:methodName]] = targetValue;
         
@@ -86,7 +99,9 @@ static NSMutableDictionary *routeMap = nil;
             boneMap =  [[NSMutableDictionary alloc] init];
         }
         //        self.boneMap[boneName]=fullName;
-        [boneMap setValue:fullName forKey:boneName];
+        [boneMap setValue:fullName forKey:
+         [NSString stringWithFormat:@"%@/%@",clsStr,boneName]
+         ];
         
         self.boneMap = boneMap;
         NSLog(@"%@",self.boneMap);
@@ -174,7 +189,9 @@ static NSMutableDictionary *routeMap = nil;
 }
 
 
-- (id)post:(NSString *)urlScheme withParam:(nullable id)params useCb:(nullable id)callback {
+- (id)post:(NSString *)urlScheme withParam:(nullable id)params useCb:(nullable id)callback
+   useCache:(BOOL)shouldCacheTarget
+{
     NSString *fullUrl = [self URLEncodeString:urlScheme];
     NSURL *url = [NSURL URLWithString:fullUrl];
     if (!url) {
@@ -192,12 +209,16 @@ static NSMutableDictionary *routeMap = nil;
     NSString *method = [pathArr objectAtIndex:2];
     
     id ret;
-    if([layer isEqualToString:@"atom"]){
+    if([layer isEqualToString:@"atom"]
+       || [layer isEqualToString:@"basic"]
+       || [layer isEqualToString:@"component"]
+       || [layer isEqualToString:@"scene"]
+       ){
         ret = [self performTarget:clsString
                            action:method
                            params:params
                             useCb:callback
-                shouldCacheTarget:NO];
+                shouldCacheTarget:shouldCacheTarget];
     }
     return ret;
 }

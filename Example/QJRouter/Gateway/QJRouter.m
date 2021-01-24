@@ -33,8 +33,14 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
 
 - (void)setAtomArray:(NSArray *)atomArray {
     _atomArray = atomArray;
-    [self initializeRouteMap];
+    [self initializeRouteMap:atomArray];
 }
+- (void)setBasicArray:(NSArray *)basicArray {
+    _basicArray = basicArray;
+    [self initializeRouteMap:basicArray];
+}
+
+
 /*
  scheme://[target]/[action]?[params]
  url sample:
@@ -68,8 +74,11 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     return result;
 }
 
-- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params
-    useCb:(nullable id)callback shouldCacheTarget:(BOOL)shouldCacheTarget
+- (id)performTarget:(NSString *)targetName
+             action:(NSString *)actionName
+             params:(NSDictionary *)params
+             useCb:(nullable id)callback
+             shouldCacheTarget:(BOOL)shouldCacheTarget
 {
     NSObject *target = self.cachedTarget[targetName];
     if (target == nil) {
@@ -79,7 +88,9 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     
     NSLog(@"boneMap %@",self.boneMap);
     // generate action
-    NSString *actionString  = [self.boneMap objectForKey:actionName];
+    NSString *actionString  = [self.boneMap objectForKey:
+                               [NSString stringWithFormat:@"%@/%@",targetName,actionName]
+                               ];
     if(actionString==nil){
         NSLog(@"no sel %@",actionName);
         id x;
@@ -89,6 +100,8 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     
     if (shouldCacheTarget) {
         self.cachedTarget[targetName] = target;
+    } else{
+        self.cachedTarget[targetName] = nil;
     }
     
     if ([target respondsToSelector:action]) {
@@ -141,18 +154,28 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     
     NSString *selString = NSStringFromSelector(action);
     NSString *cbStr = @"useCb";
+    
+    // found block
+    for(int i=0;i<arguments;i++){
+        char *argend = malloc(20);
+        method_getArgumentType(runMethod,i,argend,20);
+        NSLog(@"arg[%d] => %s",i,argend);
+        free(argend);
+    }
+//    const char *methodTypeString = method_getTypeEncoding(runMethod);
+//    NSLog(@"%s = %s",methodName, methodTypeString)
    
-    NSLog(@"entype = %s, argcount = %d",@encode(NSString*),arguments);
+    NSLog(@"rettype = %s, argcount = %d",retType,arguments);
     
     /*
-     * 1,是否包含callback
-     *  是=> invocation
-     *  否=> performSelector
-     * 2,参数数量
-     *  无 performSelector
-     *  1 performSelector withObject
-     *  2 performSelector withObject withObject
-     *  3 invocation
+     *  参数数量 <3 args
+     *   无 performSelector
+     *  >=3 args  1,2,3 argument,是否包含callback
+     *      是=> invocation
+     *      否=> performSelector
+     *          1 performSelector withObject
+     *          2 performSelector withObject withObject
+     *          3 invocation
      */
     
     if(arguments<3){

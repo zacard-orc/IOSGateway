@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04C6F203243F507B0009616A /* Target_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F202243F507B0009616A /* Target_A.m */; };
-		04C6F206243F508D0009616A /* Target_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F205243F508D0009616A /* Target_B.m */; };
 		3C0D5C9025BC46EB006AE016 /* Target_commons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D5C8625BC46EB006AE016 /* Target_commons.m */; };
 		3C0D5C9125BC46EB006AE016 /* QJRouter+gm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D5C8925BC46EB006AE016 /* QJRouter+gm.m */; };
 		3C0D5C9225BC46EB006AE016 /* UIViewController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D5C8A25BC46EB006AE016 /* UIViewController+Router.m */; };
@@ -48,10 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C6F201243F507B0009616A /* Target_A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_A.h; sourceTree = "<group>"; };
-		04C6F202243F507B0009616A /* Target_A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_A.m; sourceTree = "<group>"; };
-		04C6F204243F508D0009616A /* Target_B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_B.h; sourceTree = "<group>"; };
-		04C6F205243F508D0009616A /* Target_B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_B.m; sourceTree = "<group>"; };
 		13BB7CC8C88B2EC68C0953B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		21DD2408E3B33656984AB6E0 /* Pods-QJRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QJRouter_Example.release.xcconfig"; path = "Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3C0D5C8625BC46EB006AE016 /* Target_commons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_commons.m; sourceTree = "<group>"; };
@@ -239,10 +233,6 @@
 				3CF74F2F25BBFC2500C6C848 /* types */,
 				6003F59C195388D20070C39A /* QJAppDelegate.h */,
 				6003F59D195388D20070C39A /* QJAppDelegate.m */,
-				04C6F201243F507B0009616A /* Target_A.h */,
-				04C6F202243F507B0009616A /* Target_A.m */,
-				04C6F204243F508D0009616A /* Target_B.h */,
-				04C6F205243F508D0009616A /* Target_B.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* QJViewController.h */,
 				6003F5A6195388D20070C39A /* QJViewController.m */,
@@ -485,10 +475,8 @@
 				3CF74F5025BC040300C6C848 /* ItemListVC.m in Sources */,
 				3CF74F3325BBFD3400C6C848 /* OpsTime.m in Sources */,
 				3C0D5C9225BC46EB006AE016 /* UIViewController+Router.m in Sources */,
-				04C6F203243F507B0009616A /* Target_A.m in Sources */,
 				3C0D5C9325BC46EB006AE016 /* NSObject+gmKey.m in Sources */,
 				6003F59E195388D20070C39A /* QJAppDelegate.m in Sources */,
-				04C6F206243F508D0009616A /* Target_B.m in Sources */,
 				6003F5A7195388D20070C39A /* QJViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				3CF74F4125BC011E00C6C848 /* NiceMgr.m in Sources */,

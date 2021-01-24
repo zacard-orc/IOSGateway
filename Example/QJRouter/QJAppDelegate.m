@@ -11,6 +11,7 @@
 
 #import "Atom/Imei.h"
 #import "Atom/OpsTime.h"
+#import "Basic/UserInfo.h"
 
 
 @implementation QJAppDelegate
@@ -18,11 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    QJRouter *qjr = QJRouter.sharedInstance;
-//    int a = 1;
-     QJRouter.sharedInstance.atomArray = @[
+    QJRouter.sharedInstance.atomArray = @[
               NSStringFromClass([Imei class]),
               NSStringFromClass([OpsTime class])
+              ];
+    
+    QJRouter.sharedInstance.basicArray = @[
+              NSStringFromClass([UserInfo class]),
               ];
     return YES;
 }

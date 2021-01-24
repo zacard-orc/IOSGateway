@@ -89,11 +89,14 @@ void removeSelectorToMediator(NSString *clsName);
  *
  * @param urlScheme
  * @param params
- *
+ * @param callback
+ * @param useCache
  * @return vc的实例
  */
-- (id)post:(NSString *)urlScheme withParam:(nullable id)params useCb:(nullable id)callback;
-
+- (id)post:(NSString *)urlScheme
+        withParam:(nullable id)params
+        useCb:(nullable id)callback
+        useCache:(BOOL)shouldCacheTarget;
 /**
  * 通过vc类的名字创建vc
  *
@@ -104,16 +107,15 @@ void removeSelectorToMediator(NSString *clsName);
  * {@"service_id": @"5930",@"is_new_special": @0}
  *
  * @return vc的实例
- *
  */
 - (id)pushScheme:(NSString *)urlScheme params:(NSDictionary *)params;
 
 
 /**
 * 初始化Map
-*
+* arr 各层级数组
 */
-- (void)initializeRouteMap;
+- (void)initializeRouteMap:(NSArray*)arr;
 @end
 
 NS_ASSUME_NONNULL_END
