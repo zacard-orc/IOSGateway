@@ -5,7 +5,7 @@
 按atom、basic、component、scene进行了分层
 ```
 
-![demo](ReadDemo.jpg)
+<img src="ReadDemo.jpg" width="50%"/>
 
 ## Feature
 - 🎉 按约定对atom、basic、component、scene进行了分层
