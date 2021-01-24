@@ -26,11 +26,13 @@
 //    NSLog(@"self class %@ %@",[self class], bundle);
     NSLog(@"self class  %@", bundle);
 
-    UIImage *img = [UIImage imageNamed:@"Dallas.bundle/demo.png"
-                    inBundle:bundle compatibleWithTraitCollection:nil
-                    ];
+//    UIImage *img = [UIImage imageNamed:@"Dallas.bundle/demo.png"
+//                    inBundle:bundle compatibleWithTraitCollection:nil
+//                    ];
+    UIImage *img = [UIImage imageNamed:@"Demo"];
+
     NSLog(@"img = %@", img);
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10,300, 100, 100)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
     
     [imgView setImage:img];
     return imgView;

@@ -12,6 +12,7 @@
 #import "Atom/Imei.h"
 #import "Atom/OpsTime.h"
 #import "Basic/UserInfo.h"
+#import "Components/NiceMgr.h"
 
 
 @implementation QJAppDelegate
@@ -27,6 +28,10 @@
     QJRouter.sharedInstance.basicArray = @[
               NSStringFromClass([UserInfo class]),
               ];
+    
+    QJRouter.sharedInstance.componentArray = @[
+               NSStringFromClass([NiceMgr class]),
+               ];
     return YES;
 }
 

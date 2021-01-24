@@ -39,6 +39,14 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     _basicArray = basicArray;
     [self initializeRouteMap:basicArray];
 }
+- (void)setComponentArray:(NSArray *)componentArray {
+    _componentArray = componentArray;
+    [self initializeRouteMap:componentArray];
+}
+- (void)setSceneArray:(NSArray *)sceneArray {
+    _sceneArray = sceneArray;
+    [self initializeRouteMap:sceneArray];
+}
 
 
 /*
@@ -180,15 +188,15 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
         isRetVoid = TRUE;
         result = nil;
     }
-    if (strcmp(retType, @encode(NSString*)) == 0) {
-        result = (NSString*)result;
-    }
-    if (strcmp(retType, @encode(NSNumber*)) == 0) {
-        result = (NSNumber*)result;
-    }
-    if (strcmp(retType, @encode(NSArray*)) == 0) {
-        result = (NSArray*)result;
-    }
+//    if (strcmp(retType, @encode(NSString*)) == 0) {
+//        result = (NSString*)result;
+//    }
+//    if (strcmp(retType, @encode(NSNumber*)) == 0) {
+//        result = (NSNumber*)result;
+//    }
+//    if (strcmp(retType, @encode(NSArray*)) == 0) {
+//        result = (NSArray*)result;
+//    }
 
     
     /*

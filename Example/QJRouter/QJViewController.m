@@ -12,6 +12,7 @@
 
 // test
 //#import "Atom/OpsTime.h"
+//#import "Components/NiceMgr.h"
 
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -25,6 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
+//    [self.view addSubview:[[NiceMgr new] addImage]];
 }
 
 -(void)alert:(NSString*)msg{
@@ -114,6 +116,14 @@
          }
          useCache:TRUE
          ];
+    } else if (indexPath.row == 5) {
+        UIImageView *img = (UIImageView*)[QJRouter.sharedInstance
+         post:@"qj://component/NiceMgr/addImage"
+         withParam:nil
+         useCb:nil
+         useCache:TRUE
+         ];
+        [self.view addSubview:img];
     } else {
         
     }

@@ -34,7 +34,6 @@ static NSMutableDictionary *routeMap = nil;
     if (routeMap==nil) {
         routeMap = [[NSMutableDictionary alloc] initWithCapacity:50];
     }
-//    NSArray *arr = self.atomArray;
     if (!arr) {
         NSLog(@"error array");
         return;
@@ -43,19 +42,6 @@ static NSMutableDictionary *routeMap = nil;
         NSDictionary *dict = [self getMethods:clsStr];
         [routeMap addEntriesFromDictionary:dict];
     }
-    
-//    NSArray *arr2 = self.basicArray;
-//    if (!arr2) {
-//        NSLog(@"error basic array");
-//        return;
-//    }
-//    for (NSString *clsStr in self.basicArray) {
-//        NSDictionary *dict = [self getMethods:clsStr];
-//        [routeMap addEntriesFromDictionary:dict];
-//    }
-    
-    
-    
 }
 
 
@@ -79,9 +65,7 @@ static NSMutableDictionary *routeMap = nil;
         // 获取方法 Name
         SEL methodSEL = method_getName(methods[i]);
         const char *methodName = sel_getName(methodSEL);
-        
-
-        
+                
         //        dict[[NSString stringWithUTF8String:methodName]] = targetValue;
         
         NSString *fullName = [NSString stringWithUTF8String:methodName];
