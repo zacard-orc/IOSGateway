@@ -103,6 +103,7 @@
                             useCb:nil
                             useCache:TRUE
                             ];
+        [self alert:@"save Tom"];
     } else if (indexPath.row == 4) {
         [QJRouter.sharedInstance
          post:@"qj://basic/UserInfo/getName"

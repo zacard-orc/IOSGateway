@@ -10,13 +10,14 @@
 
 @implementation UserInfo
 -(void)setName:(NSString*)name{
+    NSLog(@"save %@",name);
     _name = name;
 }
 -(void)setAge:(int)age{
     _age =age;
 }
 -(NSString *)getName:(BLOCKDEF_USERINFO)callback{
-    NSLog(@"done");
+    NSLog(@"done cb _name");
     callback(_name);
     return @"done";
 }

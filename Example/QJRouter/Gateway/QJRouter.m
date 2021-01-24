@@ -155,17 +155,41 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     NSString *selString = NSStringFromSelector(action);
     NSString *cbStr = @"useCb";
     
+    int blockIdx = -1;
+    BOOL isRetVoid = FALSE;
+    
     // found block
     for(int i=0;i<arguments;i++){
         char *argend = malloc(20);
         method_getArgumentType(runMethod,i,argend,20);
         NSLog(@"arg[%d] => %s",i,argend);
+        
+        if(strcmp(argend,"@?")==0){
+            blockIdx = i;
+            NSLog(@"has block argu");
+        }
+        
         free(argend);
     }
-//    const char *methodTypeString = method_getTypeEncoding(runMethod);
-//    NSLog(@"%s = %s",methodName, methodTypeString)
    
     NSLog(@"rettype = %s, argcount = %d",retType,arguments);
+    
+    id result;
+    
+    if (strcmp(retType, @encode(void)) == 0){
+        isRetVoid = TRUE;
+        result = nil;
+    }
+    if (strcmp(retType, @encode(NSString*)) == 0) {
+        result = (NSString*)result;
+    }
+    if (strcmp(retType, @encode(NSNumber*)) == 0) {
+        result = (NSNumber*)result;
+    }
+    if (strcmp(retType, @encode(NSArray*)) == 0) {
+        result = (NSArray*)result;
+    }
+
     
     /*
      *  参数数量 <3 args
@@ -178,35 +202,37 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
      *          3 invocation
      */
     
-    if(arguments<3){
+    if( arguments == 2 ) {
+        NSLog(@"do arg=2");
         return [target performSelector:action];
-    }
-    
-//    return [[OpsTime new] getTime];
-//    if (strcmp(retType, @encode(void)) == 0)
-//        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
-//        [invocation setArgument:&params atIndex:2];
-//        [invocation setSelector:action];
-//        [invocation invoke];
-//        return nil;
-//    }
-   
-    
-    if (strcmp(retType, @encode(NSString*)) == 0) {
+    } else if ( arguments == 3) {
+        NSLog(@"do arg=3");
+        // only demo, for return NSString
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setTarget:target];
         [invocation setSelector:action];
-        if(arguments>=3){
+        if(blockIdx<0){
             [invocation setArgument:&params atIndex:2];
-            //todo 很多判断
-            if ([selString containsString:cbStr]) {
-                [invocation setArgument:&callback atIndex:3];
-                NSLog(@"add argu callback");
-            }
+        } else{
+            [invocation setArgument:&callback atIndex:2];
         }
         [invocation invoke];
-        NSString *result;
-        [invocation getReturnValue:&result];
+        if (!isRetVoid) {
+            [invocation getReturnValue:&result];
+        }
+        return result;
+    } else{
+        NSLog(@"do arg=4 & block");
+        // only demo, not support multi params
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
+        [invocation setTarget:target];
+        [invocation setSelector:action];
+        [invocation setArgument:&params atIndex:2];
+        [invocation setArgument:&callback atIndex:3];
+        [invocation invoke];
+        if (!isRetVoid) {
+            [invocation getReturnValue:&result];
+        }
         return result;
     }
     
