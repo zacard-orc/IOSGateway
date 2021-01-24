@@ -10,6 +10,9 @@
 #import "QJCommon.h"
 #import <objc/runtime.h>
 
+//test
+//#import "../Atom/OpsTime.h"
+
 NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwiftTargetModuleName";
 
 @interface QJRouter()
@@ -140,6 +143,23 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     NSString *cbStr = @"useCb";
    
     NSLog(@"entype = %s, argcount = %d",@encode(NSString*),arguments);
+    
+    /*
+     * 1,是否包含callback
+     *  是=> invocation
+     *  否=> performSelector
+     * 2,参数数量
+     *  无 performSelector
+     *  1 performSelector withObject
+     *  2 performSelector withObject withObject
+     *  3 invocation
+     */
+    
+    if(arguments<3){
+        return [target performSelector:action];
+    }
+    
+//    return [[OpsTime new] getTime];
 //    if (strcmp(retType, @encode(void)) == 0)
 //        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
 //        [invocation setArgument:&params atIndex:2];
@@ -147,16 +167,19 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
 //        [invocation invoke];
 //        return nil;
 //    }
+   
     
     if (strcmp(retType, @encode(NSString*)) == 0) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setTarget:target];
         [invocation setSelector:action];
-        [invocation setArgument:&params atIndex:2];
-        //todo 很多判断
-        if ([selString containsString:cbStr]) {
-            [invocation setArgument:&callback atIndex:3];
-            NSLog(@"add argu callback");
+        if(arguments>=3){
+            [invocation setArgument:&params atIndex:2];
+            //todo 很多判断
+            if ([selString containsString:cbStr]) {
+                [invocation setArgument:&callback atIndex:3];
+                NSLog(@"add argu callback");
+            }
         }
         [invocation invoke];
         NSString *result;

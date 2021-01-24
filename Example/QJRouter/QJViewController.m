@@ -10,6 +10,9 @@
 #import "Gateway/QJRouter.h"
 #import "Gateway/QJRouter+gm.h"
 
+// test
+//#import "Atom/OpsTime.h"
+
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -84,6 +87,14 @@
                       [self alert:msg];
                   }
                 ];
+    } else if (indexPath.row == 2) {
+        NSString *ddtime = [QJRouter.sharedInstance
+                          post:@"qj://atom/OpsTime/getTime"
+                          withParam:nil
+                          useCb:nil
+                          ];
+        NSLog(@"ret ddtime = %@",ddtime);
+        [self alert:ddtime];
     } else {
         
     }
