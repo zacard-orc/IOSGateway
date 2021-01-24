@@ -94,7 +94,19 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
         target = [[targetClass alloc] init];
     }
     
+    if (shouldCacheTarget) {
+        self.cachedTarget[targetName] = target;
+    } else{
+        self.cachedTarget[targetName] = nil;
+    }
+
     NSLog(@"boneMap %@",self.boneMap);
+    
+    if([actionName isEqualToString:@"initvc"]){
+        NSLog(@"it is vc init => %@",targetName);
+        //todo other vc init parameters
+        return target;
+    }
     // generate action
     NSString *actionString  = [self.boneMap objectForKey:
                                [NSString stringWithFormat:@"%@/%@",targetName,actionName]
@@ -106,11 +118,7 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     }
     SEL action = NSSelectorFromString(actionString);
     
-    if (shouldCacheTarget) {
-        self.cachedTarget[targetName] = target;
-    } else{
-        self.cachedTarget[targetName] = nil;
-    }
+   
     
     if ([target respondsToSelector:action]) {
         return [self safePerformAction:action target:target params:params useCb:callback];
@@ -160,8 +168,7 @@ NSString * const GMRouterParamsKeySwiftTargetModuleName = @"GMRouterParamsKeySwi
     Method runMethod = class_getInstanceMethod([target class], action);
     int arguments = method_getNumberOfArguments(runMethod);
     
-    NSString *selString = NSStringFromSelector(action);
-    NSString *cbStr = @"useCb";
+//    NSString *selString = NSStringFromSelector(action);
     
     int blockIdx = -1;
     BOOL isRetVoid = FALSE;

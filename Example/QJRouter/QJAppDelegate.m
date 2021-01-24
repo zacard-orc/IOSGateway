@@ -13,6 +13,8 @@
 #import "Atom/OpsTime.h"
 #import "Basic/UserInfo.h"
 #import "Components/NiceMgr.h"
+#import "Scene/ExpressVC.h"
+#import "Scene/ItemListVC.h"
 
 
 @implementation QJAppDelegate
@@ -23,15 +25,20 @@
     QJRouter.sharedInstance.atomArray = @[
               NSStringFromClass([Imei class]),
               NSStringFromClass([OpsTime class])
-              ];
+            ];
     
     QJRouter.sharedInstance.basicArray = @[
               NSStringFromClass([UserInfo class]),
-              ];
+            ];
     
     QJRouter.sharedInstance.componentArray = @[
                NSStringFromClass([NiceMgr class]),
-               ];
+            ];
+    
+    QJRouter.sharedInstance.sceneArray = @[
+               NSStringFromClass([ExpressVC class]),
+               NSStringFromClass([ItemListVC class]),
+            ];
     return YES;
 }
 

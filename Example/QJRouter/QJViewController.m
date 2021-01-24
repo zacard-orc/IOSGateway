@@ -13,6 +13,7 @@
 // test
 //#import "Atom/OpsTime.h"
 //#import "Components/NiceMgr.h"
+#import "Scene/ExpressVC.h"
 
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -27,6 +28,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
 //    [self.view addSubview:[[NiceMgr new] addImage]];
+//    [self.navigationController pushViewController:[ExpressVC new] animated:TRUE];
 }
 
 -(void)alert:(NSString*)msg{
@@ -124,6 +126,24 @@
          useCache:TRUE
          ];
         [self.view addSubview:img];
+    }  else if (indexPath.row == 6) {
+       id vc = [QJRouter.sharedInstance
+                  post:@"qj://scene/ExpressVC/initvc"
+                  withParam:nil
+                  useCb:nil
+                  useCache:TRUE
+                  ];
+        NSLog(@"vc class %@",NSStringFromClass([vc class]));
+        [self.navigationController pushViewController:vc animated:YES];
+    }  else if (indexPath.row == 7) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/ItemListVC/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        NSLog(@"vc class %@",NSStringFromClass([vc class]));
+        [self.navigationController pushViewController:vc animated:YES];
     } else {
         
     }
