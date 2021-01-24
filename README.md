@@ -9,7 +9,7 @@
 
 ## Feature
 - 🎉 按约定对atom、basic、component、scene进行了分层
-- 🎉 基于官方Runtime，无hack语法
+- 🎉 基于官方Runtime、C99。无hack语法
 - 🎉 基于url schema约定/${layer}/${Class}/${Method}来实现业务调用
 - 🎉 增加了对block的支持
 - 🎉 增加了对invocation的支持
