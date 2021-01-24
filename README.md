@@ -16,5 +16,33 @@
 - 🎉 增加了对multi withObject的支持
 - 🎉 收敛网关，暴露相关api，以便支持审计、限流、打点等能力
 
-
 ## Version 1.2.0
+
+
+## How to use
+
+### register
+```objective-c
+#import "xxxxxxx"
+
+QJRouter.sharedInstance.atomArray = @[
+NSStringFromClass([Imei class]),
+NSStringFromClass([OpsTime class])
+];
+
+QJRouter.sharedInstance.basicArray = @[
+NSStringFromClass([UserInfo class]),
+];
+```
+
+### use
+```objective-c
+NSString *imei = [QJRouter.sharedInstance
+    post:@"qj://atom/Imei/getImei"
+    withParam:[NSNumber numberWithInteger:1]
+    useCb:nil
+    useCache:FALSE
+    ];
+NSLog(@"ret imei = %@",imei);
+[self alert:imei];
+```
