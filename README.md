@@ -51,3 +51,15 @@ NSString *imei = [QJRouter.sharedInstance
 NSLog(@"ret imei = %@",imei);
 [self alert:imei];
 ```
+
+```objective-c
+[QJRouter.sharedInstance
+ post:@"qj://basic/UserInfo/getName"
+ withParam:@"Tom"
+ useCb:(__bridge id)(__bridge void*)^(NSString *name){
+     NSLog(@"cb ret = %@", name);
+     [self alert:name];
+ }
+ useCache:TRUE
+ ];
+ ```
