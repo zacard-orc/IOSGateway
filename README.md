@@ -64,3 +64,15 @@ NSLog(@"ret imei = %@",imei);
  useCache:TRUE
  ];
  ```
+ 
+ ### use vc
+ ```objective-c
+ id vc = [QJRouter.sharedInstance
+          post:@"qj://scene/ItemListVC/initvc"
+          withParam:nil
+          useCb:nil
+          useCache:TRUE
+          ];
+ NSLog(@"vc class %@",NSStringFromClass([vc class]));
+ [self.navigationController pushViewController:vc animated:YES];
+  ```
