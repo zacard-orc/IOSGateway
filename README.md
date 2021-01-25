@@ -40,7 +40,7 @@ NSStringFromClass([UserInfo class]),
 ];
 ```
 
-### use
+### use normal
 ```objective-c
 NSString *imei = [QJRouter.sharedInstance
     post:@"qj://atom/Imei/getImei"
@@ -52,6 +52,7 @@ NSLog(@"ret imei = %@",imei);
 [self alert:imei];
 ```
 
+### use block
 ```objective-c
 [QJRouter.sharedInstance
  post:@"qj://basic/UserInfo/getName"
