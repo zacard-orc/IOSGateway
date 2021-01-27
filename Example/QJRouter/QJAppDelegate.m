@@ -11,16 +11,26 @@
 
 #import "Atom/Imei.h"
 #import "Atom/OpsTime.h"
+
 #import "Basic/UserInfo.h"
+
 #import "Components/NiceMgr.h"
+
 #import "Scene/ExpressVC.h"
 #import "Scene/ItemListVC.h"
+#import "Scene/JmeVC.h"
 
+
+//#import <JavaScriptCore/JavaScriptCore.h>
 
 @implementation QJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+
+
     // Override point for customization after application launch.
     QJRouter.sharedInstance.atomArray = @[
               NSStringFromClass([Imei class]),
@@ -38,6 +48,7 @@
     QJRouter.sharedInstance.sceneArray = @[
                NSStringFromClass([ExpressVC class]),
                NSStringFromClass([ItemListVC class]),
+               NSStringFromClass([JmeVC class]),
             ];
     return YES;
 }

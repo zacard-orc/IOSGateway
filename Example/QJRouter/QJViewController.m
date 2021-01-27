@@ -45,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +66,8 @@
         cell.textLabel.text = @"🎦 Scene： Express 物流页";
     } else if (indexPath.row == 7) {
         cell.textLabel.text = @"🎦 Scene： ItemList 商品列表页";
+    } else if (indexPath.row == 8) {
+        cell.textLabel.text = @"🎦 Scene： JMESPath 体验";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"aaa-%ld",indexPath.row];
     }
@@ -144,7 +146,16 @@
                  ];
         NSLog(@"vc class %@",NSStringFromClass([vc class]));
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 8) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/JmeVC/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        NSLog(@"vc class %@",NSStringFromClass([vc class]));
+        [self.navigationController pushViewController:vc animated:YES];
+    }  else {
         
     }
 }

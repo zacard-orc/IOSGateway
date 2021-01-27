@@ -13,6 +13,10 @@ It's only a play demo, you should add more robust when used in production!!
 <img src="https://s3.ax1x.com/2021/01/25/sq0B2n.jpg" width="30%"/>
 
 ## Feature
+### 1.3.0
+- 🎉  增加JMESPath demo，基于JSCore能力
+
+### 1.2.0
 - 🎉  按约定对atom、basic、component、scene进行了分层
 - 🎉  基于官方Runtime、C99。无hack语法
 - 🎉  基于url schema约定/${layer}/${Class}/${Method}来实现业务调用

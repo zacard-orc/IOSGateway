@@ -33,6 +33,12 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		891E186E25C0F90800066744 /* JmeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891E186D25C0F90800066744 /* JmeVC.m */; };
+		891E187225C0FC7800066744 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891E187125C0FC7800066744 /* JavaScriptCore.framework */; };
+		891E187925C0FDC500066744 /* t1.js in Resources */ = {isa = PBXBuildFile; fileRef = 891E187825C0FDC500066744 /* t1.js */; };
+		891E187D25C101D600066744 /* jmespath.js in Resources */ = {isa = PBXBuildFile; fileRef = 891E187C25C101D600066744 /* jmespath.js */; };
+		891E188125C1049E00066744 /* rawdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 891E188025C1049E00066744 /* rawdata.json */; };
+		891E188525C104DD00066744 /* rule.txt in Resources */ = {isa = PBXBuildFile; fileRef = 891E188425C104DD00066744 /* rule.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,13 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D5BD50C56C5CA0DCC95FC23 /* Pods-QJRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QJRouter_Example.debug.xcconfig"; path = "Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		891E186C25C0F90800066744 /* JmeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JmeVC.h; sourceTree = "<group>"; };
+		891E186D25C0F90800066744 /* JmeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JmeVC.m; sourceTree = "<group>"; };
+		891E187125C0FC7800066744 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/PrivateFrameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		891E187825C0FDC500066744 /* t1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = t1.js; sourceTree = "<group>"; };
+		891E187C25C101D600066744 /* jmespath.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jmespath.js; sourceTree = "<group>"; };
+		891E188025C1049E00066744 /* rawdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rawdata.json; sourceTree = "<group>"; };
+		891E188425C104DD00066744 /* rule.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rule.txt; sourceTree = "<group>"; };
 		E75EC456C84254D6DBE4B4D4 /* Pods-QJRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QJRouter_Tests.release.xcconfig"; path = "Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF7F9E003D57E891FC37AF30 /* QJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QJRouter.podspec; path = ../QJRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -105,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891E187225C0FC7800066744 /* JavaScriptCore.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -186,6 +200,8 @@
 				3CF74F4925BC032500C6C848 /* ExpressVC.m */,
 				3CF74F4E25BC040300C6C848 /* ItemListVC.h */,
 				3CF74F4F25BC040300C6C848 /* ItemListVC.m */,
+				891E186C25C0F90800066744 /* JmeVC.h */,
+				891E186D25C0F90800066744 /* JmeVC.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				891E187125C0FC7800066744 /* JavaScriptCore.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -225,6 +242,7 @@
 		6003F593195388D20070C39A /* Example for QJRouter */ = {
 			isa = PBXGroup;
 			children = (
+				891E187525C0FCE300066744 /* Js */,
 				3C0D5C7F25BC4358006AE016 /* Gateway */,
 				3CF74F4225BC026900C6C848 /* Scene */,
 				3CF74F3E25BC003F00C6C848 /* Components */,
@@ -282,6 +300,17 @@
 				4F2E21A930D6852EFF2F573B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		891E187525C0FCE300066744 /* Js */ = {
+			isa = PBXGroup;
+			children = (
+				891E187C25C101D600066744 /* jmespath.js */,
+				891E187825C0FDC500066744 /* t1.js */,
+				891E188025C1049E00066744 /* rawdata.json */,
+				891E188425C104DD00066744 /* rule.txt */,
+			);
+			name = Js;
 			sourceTree = "<group>";
 		};
 		BB83949FED3DBF27D8A67181 /* Pods */ = {
@@ -381,6 +410,10 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				891E188525C104DD00066744 /* rule.txt in Resources */,
+				891E187D25C101D600066744 /* jmespath.js in Resources */,
+				891E188125C1049E00066744 /* rawdata.json in Resources */,
+				891E187925C0FDC500066744 /* t1.js in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -471,6 +504,7 @@
 				3C0D5C9125BC46EB006AE016 /* QJRouter+gm.m in Sources */,
 				3C0D5C9425BC46EB006AE016 /* QJRouter.m in Sources */,
 				3CF74F3B25BBFF0900C6C848 /* UserInfo.m in Sources */,
+				891E186E25C0F90800066744 /* JmeVC.m in Sources */,
 				3C0D5C9025BC46EB006AE016 /* Target_commons.m in Sources */,
 				3CF74F5025BC040300C6C848 /* ItemListVC.m in Sources */,
 				3CF74F3325BBFD3400C6C848 /* OpsTime.m in Sources */,
@@ -627,6 +661,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -646,6 +681,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
