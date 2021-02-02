@@ -1,19 +1,30 @@
 {
-  "people": [
+  "openImg": [
     {
       "age": 20,
-      "other": "foo",
-      "name": "Bob"
+      "img": "信用卡图.jpg",
+      "title": "信用卡图"
     },
     {
       "age": 25,
-      "other": "bar",
-      "name": "Fred"
+      "img": "基金图.jpg",
+      "title": "基金图"
     },
     {
       "age": 30,
-      "other": "baz",
-      "name": "George"
-    }
+      "img": "基金图.jpg",
+      "title": "基金图"
+    },
+    {
+      "age": 40,
+      "img": "移民图.jpg",
+      "title": "移民图"
+    },
+    {
+      "age": 50,
+      "img": "养老金图.jpg",
+      "title": "养老金图"
+    },
   ]
 }
+

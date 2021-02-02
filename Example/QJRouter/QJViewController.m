@@ -13,7 +13,7 @@
 // test
 //#import "Atom/OpsTime.h"
 //#import "Components/NiceMgr.h"
-#import "Scene/ExpressVC.h"
+//#import "Scene/ExpressVC.h"
 
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -45,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,6 +68,8 @@
         cell.textLabel.text = @"🎦 Scene： ItemList 商品列表页";
     } else if (indexPath.row == 8) {
         cell.textLabel.text = @"🎦 Scene： JMESPath 体验";
+    } else if (indexPath.row == 9) {
+        cell.textLabel.text = @"🎦 Scene： WK播放 体验";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"aaa-%ld",indexPath.row];
     }
@@ -155,7 +157,24 @@
                  ];
         NSLog(@"vc class %@",NSStringFromClass([vc class]));
         [self.navigationController pushViewController:vc animated:YES];
-    }  else {
+    }  else if (indexPath.row == 9) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/WKVideo/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        NSLog(@"vc class %@",NSStringFromClass([vc class]));
+        NSLog(@"vc inaddr %@",vc);
+//        [vc loadView];
+
+//        [NSThread]
+        [self.navigationController pushViewController:vc animated:YES];
+        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.navigationController pushViewController:vc animated:YES];
+//            });
+    } else {
         
     }
 }

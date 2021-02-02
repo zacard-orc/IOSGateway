@@ -19,6 +19,10 @@
 #import "Scene/ExpressVC.h"
 #import "Scene/ItemListVC.h"
 #import "Scene/JmeVC.h"
+#import "Scene/WKVideo.h"
+
+#import <sys/time.h>
+#include <math.h>
 
 
 //#import <JavaScriptCore/JavaScriptCore.h>
@@ -28,8 +32,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
+    struct timeval start, end;
+    long timeuse;
 
+    gettimeofday(&start, NULL);
+
+    gettimeofday(&end, NULL);
+    timeuse = 1000000 * ( end.tv_sec - start.tv_sec ) + end.tv_usec - start.tv_usec;
+    printf("timeuse => %ld\n",timeuse);
+     
 
     // Override point for customization after application launch.
     QJRouter.sharedInstance.atomArray = @[
@@ -49,6 +60,7 @@
                NSStringFromClass([ExpressVC class]),
                NSStringFromClass([ItemListVC class]),
                NSStringFromClass([JmeVC class]),
+               NSStringFromClass([WKVideo class]),
             ];
     return YES;
 }

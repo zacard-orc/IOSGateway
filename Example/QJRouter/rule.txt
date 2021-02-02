@@ -1,1 +1,1 @@
-people[?age > `20`].[name, age]
+RSP_BODY.homePageData.tabData.tabList[?tabName == `财富`].[*]

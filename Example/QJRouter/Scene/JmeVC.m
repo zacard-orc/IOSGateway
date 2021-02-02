@@ -38,8 +38,8 @@
     _condField.delegate = self;
     
     
-    _retField = [[UITextView alloc]initWithFrame:CGRectMake(20, 200, 300, 300)];
-    _retField.text = @"这里是结果";
+    _retField = [[UITextView alloc]initWithFrame:CGRectMake(20, 200, 300, 500)];
+    _retField.text = @"条件框输入后按回车，可以这里看到结果";
     _retField.font = [UIFont fontWithName:@"Arial" size:16.0];//设置字体名字和字体大小
     
     
@@ -109,6 +109,8 @@
         _retField.text = jsonString;
     }
  
+    [_condField resignFirstResponder];
+
     return YES;
 }
 
