@@ -1,10 +1,40 @@
 use_frameworks!
 #source 'https://github.com/CocoaPods/Specs.git'
 #source 'git@github.com:Q14/PrivateSpecs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 target 'QJRouter_Example' do
   pod 'QJRouter', :path => '../'
+  pod 'FBLazyVector', :path => "./ReactComponent/node_modules/react-native/Libraries/FBLazyVector"
+  pod 'FBReactNativeSpec', :path => "./ReactComponent/node_modules/react-native/Libraries/FBReactNativeSpec"
+  pod 'RCTRequired', :path => "./ReactComponent/node_modules/react-native/Libraries/RCTRequired"
+  pod 'RCTTypeSafety', :path => "./ReactComponent/node_modules/react-native/Libraries/TypeSafety"
+  pod 'React', :path => './ReactComponent/node_modules/react-native/'
+  pod 'React-Core', :path => './ReactComponent/node_modules/react-native/'
+  pod 'React-CoreModules', :path => './ReactComponent/node_modules/react-native/React/CoreModules'
+  pod 'React-Core/DevSupport', :path => './ReactComponent/node_modules/react-native/'
+  pod 'React-RCTActionSheet', :path => './ReactComponent/node_modules/react-native/Libraries/ActionSheetIOS'
+  pod 'React-RCTAnimation', :path => './ReactComponent/node_modules/react-native/Libraries/NativeAnimation'
+  pod 'React-RCTBlob', :path => './ReactComponent/node_modules/react-native/Libraries/Blob'
+  pod 'React-RCTImage', :path => './ReactComponent/node_modules/react-native/Libraries/Image'
+  pod 'React-RCTLinking', :path => './ReactComponent/node_modules/react-native/Libraries/LinkingIOS'
+  pod 'React-RCTNetwork', :path => './ReactComponent/node_modules/react-native/Libraries/Network'
+  pod 'React-RCTSettings', :path => './ReactComponent/node_modules/react-native/Libraries/Settings'
+  pod 'React-RCTText', :path => './ReactComponent/node_modules/react-native/Libraries/Text'
+  pod 'React-RCTVibration', :path => './ReactComponent/node_modules/react-native/Libraries/Vibration'
+  pod 'React-Core/RCTWebSocket', :path => './ReactComponent/node_modules/react-native/'
+
+  pod 'React-cxxreact', :path => './ReactComponent/node_modules/react-native/ReactCommon/cxxreact'
+  pod 'React-jsi', :path => './ReactComponent/node_modules/react-native/ReactCommon/jsi'
+  pod 'React-jsiexecutor', :path => './ReactComponent/node_modules/react-native/ReactCommon/jsiexecutor'
+  pod 'React-jsinspector', :path => './ReactComponent/node_modules/react-native/ReactCommon/jsinspector'
+  pod 'ReactCommon/callinvoker', :path => "./ReactComponent/node_modules/react-native/ReactCommon"
+  pod 'ReactCommon/turbomodule/core', :path => "./ReactComponent/node_modules/react-native/ReactCommon"
+  pod 'Yoga', :path => './ReactComponent/node_modules/react-native/ReactCommon/yoga'
+
+  pod 'DoubleConversion', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   target 'QJRouter_Tests' do
     inherit! :search_paths    

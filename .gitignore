@@ -1,5 +1,6 @@
 # OS X
 .DS_Store
+./Example/ReactComponent/node_modules
 
 # Xcode
 build/
