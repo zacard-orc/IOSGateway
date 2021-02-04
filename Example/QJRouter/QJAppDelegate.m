@@ -20,6 +20,9 @@
 #import "Scene/ItemListVC.h"
 #import "Scene/JmeVC.h"
 #import "Scene/WKVideo.h"
+#import "Scene/PreLoadVC.h"
+#import "Scene/PreLoadDoubanVC.h"
+#import "Scene/PreLoadQQVC.h"
 
 #import <sys/time.h>
 #include <math.h>
@@ -61,6 +64,9 @@
                NSStringFromClass([ItemListVC class]),
                NSStringFromClass([JmeVC class]),
                NSStringFromClass([WKVideo class]),
+               NSStringFromClass([PreLoadVC class]),
+               NSStringFromClass([PreLoadDoubanVC class]),
+               NSStringFromClass([PreLoadQQVC class]),
             ];
     return YES;
 }

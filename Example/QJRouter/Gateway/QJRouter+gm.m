@@ -32,7 +32,7 @@ static NSMutableDictionary *routeMap = nil;
 
 - (void)initializeRouteMap:(NSArray*)arr {
     if (routeMap==nil) {
-        routeMap = [[NSMutableDictionary alloc] initWithCapacity:50];
+        routeMap = [[NSMutableDictionary alloc] initWithCapacity:500];
     }
     if (!arr) {
         NSLog(@"error array");
