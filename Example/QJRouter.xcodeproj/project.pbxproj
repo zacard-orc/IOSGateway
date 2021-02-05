@@ -45,6 +45,7 @@
 		891E19B925CBA62900066744 /* PreLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891E19B825CBA62900066744 /* PreLoadVC.m */; };
 		89D14F2125CBEB3500333194 /* PreLoadDoubanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F2025CBEB3500333194 /* PreLoadDoubanVC.m */; };
 		89D14F2625CBEE6E00333194 /* PreLoadQQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F2425CBEE6E00333194 /* PreLoadQQVC.m */; };
+		89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F4B25CCDD7E00333194 /* RNVC.m */; };
 		ED02F4BFC0D5835D26B14628 /* Pods_QJRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF00A12D602C4C694A31156D /* Pods_QJRouter_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		89D14F2025CBEB3500333194 /* PreLoadDoubanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreLoadDoubanVC.m; sourceTree = "<group>"; };
 		89D14F2425CBEE6E00333194 /* PreLoadQQVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreLoadQQVC.m; sourceTree = "<group>"; };
 		89D14F2525CBEE6E00333194 /* PreLoadQQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreLoadQQVC.h; sourceTree = "<group>"; };
+		89D14F4A25CCDD7E00333194 /* RNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNVC.h; sourceTree = "<group>"; };
+		89D14F4B25CCDD7E00333194 /* RNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNVC.m; sourceTree = "<group>"; };
 		A429EFCB9EBFCC3401587FFE /* Pods_QJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF00A12D602C4C694A31156D /* Pods_QJRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QJRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75EC456C84254D6DBE4B4D4 /* Pods-QJRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QJRouter_Tests.release.xcconfig"; path = "Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				89D14F2025CBEB3500333194 /* PreLoadDoubanVC.m */,
 				891E19B725CBA62900066744 /* PreLoadVC.h */,
 				891E19B825CBA62900066744 /* PreLoadVC.m */,
+				89D14F4A25CCDD7E00333194 /* RNVC.h */,
+				89D14F4B25CCDD7E00333194 /* RNVC.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 				89D14F2625CBEE6E00333194 /* PreLoadQQVC.m in Sources */,
 				3CF74F5025BC040300C6C848 /* ItemListVC.m in Sources */,
 				3CF74F3325BBFD3400C6C848 /* OpsTime.m in Sources */,
+				89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */,
 				3C0D5C9225BC46EB006AE016 /* UIViewController+Router.m in Sources */,
 				3C0D5C9325BC46EB006AE016 /* NSObject+gmKey.m in Sources */,
 				6003F59E195388D20070C39A /* QJAppDelegate.m in Sources */,

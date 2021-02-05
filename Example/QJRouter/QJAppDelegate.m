@@ -23,10 +23,14 @@
 #import "Scene/PreLoadVC.h"
 #import "Scene/PreLoadDoubanVC.h"
 #import "Scene/PreLoadQQVC.h"
+#import "Scene/RNVC.h"
+
 
 #import <sys/time.h>
 #include <math.h>
 
+//#import <React/RCTRootView.h>
+//#import "RNVC.h"
 
 //#import <JavaScriptCore/JavaScriptCore.h>
 
@@ -43,6 +47,17 @@
     gettimeofday(&end, NULL);
     timeuse = 1000000 * ( end.tv_sec - start.tv_sec ) + end.tv_usec - start.tv_usec;
     printf("timeuse => %ld\n",timeuse);
+    
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    RNVC *rnvc = [[RNVC alloc] init];
+//    self.window.rootViewController = rnvc;
+//
+//    NSURL *url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+//    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
+//    rnvc.view = rootView;
+//
+//    [self.window makeKeyAndVisible];
      
 
     // Override point for customization after application launch.
@@ -67,6 +82,7 @@
                NSStringFromClass([PreLoadVC class]),
                NSStringFromClass([PreLoadDoubanVC class]),
                NSStringFromClass([PreLoadQQVC class]),
+               NSStringFromClass([RNVC class]),
             ];
     return YES;
 }

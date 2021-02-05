@@ -15,6 +15,9 @@
 //#import "Components/NiceMgr.h"
 //#import "Scene/ExpressVC.h"
 #import "Scene/PreLoadVC.h"
+#import "Scene/RNVC.h"
+
+#import <React/RCTRootView.h>
 
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSMutableDictionary *vcLoadWkHis;
@@ -83,6 +86,8 @@
         cell.textLabel.text = @"🎦 Scene： WK预加载-163 体验";
     } else if (indexPath.row == 12) {
         cell.textLabel.text = @"🎦 Scene： WK预加载-qq 体验";
+    } else if (indexPath.row == 13) {
+        cell.textLabel.text = @"⚛️ Scene： ReactNative 体验";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"aaa-%ld",indexPath.row];
     }
@@ -182,29 +187,7 @@
 
         [self.navigationController pushViewController:vc animated:YES];
     }  else if (indexPath.row == 10) {
-//        id vc = [QJRouter.sharedInstance
-//                 post:@"qj://scene/PreLoadVC/initvc"
-//                 withParam:nil
-//                 useCb:nil
-//                 useCache:TRUE
-//                 ];
-        
-     
         [self.navigationController pushViewController:_vv animated:YES];
-//        NSString *vcName = NSStringFromClass([vc class]);
-//        NSLog(@"vc class %@",NSStringFromClass([vc class]));
-//        NSLog(@"vc inaddr %@",vc);
-//        if([_vcLoadWkHis objectForKey:vcName]){
-//            NSLog(@"resue vc %@",vcName);
-//            [self.navigationController pushViewController:vc animated:YES];
-//        } else{
-//            [vc loadViewIfNeeded];
-//            [_vcLoadWkHis setValue:@(1) forKey:vcName];
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [self.navigationController pushViewController:vc animated:YES];
-//            });
-//        }
-       
     } else if (indexPath.row == 11) {
         id vc = [QJRouter.sharedInstance
                  post:@"qj://scene/PreLoadDoubanVC/initvc"
@@ -248,6 +231,22 @@
                 [self.navigationController pushViewController:vc animated:YES];
             });
         }
+       
+    } else if (indexPath.row == 13) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/RNVC/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        
+        NSURL *url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+        RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
+        
+        RNVC *vcx = (RNVC*)vc;
+        vcx.view = rootView;
+        
+        [self.navigationController pushViewController:vcx animated:YES];
        
     } else {
         
