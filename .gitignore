@@ -1,5 +1,7 @@
 # OS X
 .DS_Store
+./Example/Pods/boost-for-react-native
+Example/Pods/boost-for-react-native
 
 # Xcode
 build/

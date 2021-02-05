@@ -1,7 +1,7 @@
 use_frameworks!
 #source 'https://github.com/CocoaPods/Specs.git'
 #source 'git@github.com:Q14/PrivateSpecs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'QJRouter_Example' do
   pod 'QJRouter', :path => '../'
