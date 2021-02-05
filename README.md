@@ -13,6 +13,9 @@ It's only a play demo, you should add more robust when used in production!!
 <img src="https://s3.ax1x.com/2021/02/05/y8EUHK.png" width="30%"/>
 
 ## Feature
+### 1.5.0
+- 🎉  集成reactnative
+
 ### 1.4.0
 - 🎉  增加WKWebview预加载能力
 - 🎉  增加WKWebview自动播放H5的能力
