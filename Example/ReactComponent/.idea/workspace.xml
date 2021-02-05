@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../QJRouter/RNVC.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QJRouter/RNVC.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter/QJAppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/QJAppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter/QJRouter-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/QJRouter-Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +48,7 @@
       <workItem from="1612254171736" duration="917000" />
       <workItem from="1612342998498" duration="282000" />
       <workItem from="1612344704399" duration="640000" />
-      <workItem from="1612432097575" duration="1310000" />
+      <workItem from="1612432097575" duration="1679000" />
     </task>
     <servers />
   </component>

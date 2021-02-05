@@ -10,7 +10,7 @@ Attention！！
 It's only a play demo, you should add more robust when used in production!!
 ```
 
-<img src="https://s3.ax1x.com/2021/01/25/sq0B2n.jpg" width="30%"/>
+<img src="https://s3.ax1x.com/2021/02/05/y8EUHK.png" width="30%"/>
 
 ## Feature
 ### 1.4.0
