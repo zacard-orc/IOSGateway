@@ -24,6 +24,7 @@
 #import "Scene/PreLoadDoubanVC.h"
 #import "Scene/PreLoadQQVC.h"
 #import "Scene/RNVC.h"
+#import "Scene/SyncVC.h"
 
 
 #import <sys/time.h>
@@ -83,6 +84,7 @@
                NSStringFromClass([PreLoadDoubanVC class]),
                NSStringFromClass([PreLoadQQVC class]),
                NSStringFromClass([RNVC class]),
+               NSStringFromClass([SyncVC class]),
             ];
     return YES;
 }

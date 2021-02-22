@@ -19,6 +19,8 @@
 
 #import <React/RCTRootView.h>
 
+static int RN_BUNDLEID = 0;
+
 @interface QJViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSMutableDictionary *vcLoadWkHis;
 @property (nonatomic, strong) PreLoadVC *vv;
@@ -88,6 +90,8 @@
         cell.textLabel.text = @"🎦 Scene： WK预加载-qq 体验";
     } else if (indexPath.row == 13) {
         cell.textLabel.text = @"⚛️ Scene： ReactNative 体验";
+    } else if (indexPath.row == 14) {
+        cell.textLabel.text = @"🎦 Scene： 数据同步体验";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"aaa-%ld",indexPath.row];
     }
@@ -197,18 +201,18 @@
                  ];
         
         NSString *vcName = NSStringFromClass([vc class]);
-        NSLog(@"vc class %@",NSStringFromClass([vc class]));
-        NSLog(@"vc inaddr %@",vc);
-        if([_vcLoadWkHis objectForKey:vcName]){
-            NSLog(@"resue vc %@",vcName);
-            [self.navigationController pushViewController:vc animated:YES];
-        } else{
-            [vc loadViewIfNeeded];
-            [_vcLoadWkHis setValue:@(1) forKey:vcName];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController pushViewController:vc animated:YES];
-            });
-        }
+//        NSLog(@"vc class %@",NSStringFromClass([vc class]));
+//        NSLog(@"vc inaddr %@",vc);
+//        if([_vcLoadWkHis objectForKey:vcName]){
+//            NSLog(@"resue vc %@",vcName);
+//            [self.navigationController pushViewController:vc animated:YES];
+//        } else{
+//            [vc loadViewIfNeeded];
+//            [_vcLoadWkHis setValue:@(1) forKey:vcName];
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [self.navigationController pushViewController:vc animated:YES];
+//            });
+//        }
        
     } else if (indexPath.row == 12) {
         id vc = [QJRouter.sharedInstance
@@ -227,11 +231,7 @@
         } else{
             [vc loadViewIfNeeded];
             [_vcLoadWkHis setValue:@(1) forKey:vcName];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController pushViewController:vc animated:YES];
-            });
         }
-       
     } else if (indexPath.row == 13) {
         id vc = [QJRouter.sharedInstance
                  post:@"qj://scene/RNVC/initvc"
@@ -240,7 +240,31 @@
                  useCache:TRUE
                  ];
         
-        NSURL *url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+        RN_BUNDLEID++;
+        
+        NSURL *url;
+        NSString *ssf;
+//        if(RN_BUNDLEID%2){
+//            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios.123"ofType:@"jsbundle"];
+//        } else{
+            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios"ofType:@"jsbundle"];
+//        }
+        
+        NSLog(@"ssf => %@",ssf);
+
+//        NSString * jsBundlePath = NSHomeDirectory();
+//        NSLog(@"sanbox root path = %@",jsBundlePath);
+
+//        url = [NSURL URLWithString:[jsBundlePath stringByAppendingString:@"/rndist/index.ios.bundle.123"]];
+        
+        url = [NSURL URLWithString:ssf];
+        
+//        NSLog(@"sanbox root url = %@",url);
+
+
+//        url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+//        NSURL *url = [NSURL URLWithString:@"http://172.30.139.50:8081/index.bundle?platform=ios&dev=true"];
+
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
         
         RNVC *vcx = (RNVC*)vc;
@@ -248,6 +272,15 @@
         
         [self.navigationController pushViewController:vcx animated:YES];
        
+    } else if (indexPath.row == 14) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/SyncVC/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        
+        [self.navigationController pushViewController:vc animated:YES];
     } else {
         
     }
