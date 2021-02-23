@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/detox.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QJRouter/rndist/index.ios.jsbundle" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/rndist/index.ios.jsbundle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.ios.jsbundle" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.ios.jsbundle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

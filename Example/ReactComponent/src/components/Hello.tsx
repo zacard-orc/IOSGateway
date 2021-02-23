@@ -1,6 +1,20 @@
 // components/Hello.tsx
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {
+  Button,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  PixelRatio,
+} from 'react-native';
+
+const dp2px = (dp: number) => PixelRatio.getPixelSizeForLayoutSize(dp);
+const px2dp = (px: number) => PixelRatio.roundToNearestPixel(px);
+const {width, height} = Dimensions.get('window');
+const pxRatio = PixelRatio.get();
+
+const designSize = {width: 750, height: 1336};
 
 export interface Props {
   name: string;
@@ -29,6 +43,9 @@ const Hello: React.FC<Props> = (props) => {
       <Text style={styles.greeting}>
         Hello {props.name + getExclamationMarks(enthusiasmLevel || 0)}
       </Text>
+      <View>
+        <Text>device {`${width} x ${height} | ${pxRatio}`}</Text>
+      </View>
 
       <View style={styles.buttons}>
         <View style={styles.button}>
@@ -64,7 +81,8 @@ const styles = StyleSheet.create({
     minHeight: 70,
     alignItems: 'stretch',
     alignSelf: 'center',
-    borderWidth: 5,
+    width: 375,
+    borderWidth: 1,
   },
   button: {
     flex: 1,
