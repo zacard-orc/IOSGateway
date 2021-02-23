@@ -1,21 +1,7 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 
-import Hello, {Props} from './src/components/Hello';
-
-// export default class RNDemo extends Component {
-//   arg = {
-//     name: 'bbbb',
-//   };
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>3333</Text>
-//         <Hello {...this.arg} />
-//       </View>
-//     );
-//   }
-// }
+import Hello, {Props} from '~/components/Hello';
 
 const RNDemo: React.FC<Props> = () => {
   const arg = {
