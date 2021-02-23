@@ -262,7 +262,7 @@ static int RN_BUNDLEID = 0;
 //        NSLog(@"sanbox root url = %@",url);
 
 
-//        url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+        url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
 //        NSURL *url = [NSURL URLWithString:@"http://172.30.139.50:8081/index.bundle?platform=ios&dev=true"];
 
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
