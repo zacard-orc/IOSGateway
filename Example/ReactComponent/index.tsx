@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 
+import Hello from './src/components/Hello';
+
 export default class RNDemo extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Red11</Text>
+        {/*<Text>3333</Text>*/}
+        <Hello name="aaa" />
       </View>
     );
   }
@@ -14,7 +17,8 @@ const styles = StyleSheet.create({
   container: {
     margin: 100,
     flex: 1,
-    backgroundColor: 'grey',
+    height: 200,
+    // backgroundColor: 'grey',
   },
 });
 

@@ -46,6 +46,9 @@
 		89D14F2125CBEB3500333194 /* PreLoadDoubanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F2025CBEB3500333194 /* PreLoadDoubanVC.m */; };
 		89D14F2625CBEE6E00333194 /* PreLoadQQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F2425CBEE6E00333194 /* PreLoadQQVC.m */; };
 		89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F4B25CCDD7E00333194 /* RNVC.m */; };
+		89EE026925E3B37900277090 /* index.ios.456.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 89EE026825E3B37900277090 /* index.ios.456.jsbundle */; };
+		89EE026D25E3B44000277090 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 89EE026C25E3B44000277090 /* index.ios.jsbundle */; };
+		89EF530A25D213AC004CD539 /* SyncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF530925D213AC004CD539 /* SyncVC.m */; };
 		ED02F4BFC0D5835D26B14628 /* Pods_QJRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF00A12D602C4C694A31156D /* Pods_QJRouter_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +131,10 @@
 		89D14F2525CBEE6E00333194 /* PreLoadQQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreLoadQQVC.h; sourceTree = "<group>"; };
 		89D14F4A25CCDD7E00333194 /* RNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNVC.h; sourceTree = "<group>"; };
 		89D14F4B25CCDD7E00333194 /* RNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNVC.m; sourceTree = "<group>"; };
+		89EE026825E3B37900277090 /* index.ios.456.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.456.jsbundle; path = rndist/index.ios.456.jsbundle; sourceTree = "<group>"; };
+		89EE026C25E3B44000277090 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.jsbundle; path = rndist/index.ios.jsbundle; sourceTree = "<group>"; };
+		89EF530825D213AC004CD539 /* SyncVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncVC.h; sourceTree = "<group>"; };
+		89EF530925D213AC004CD539 /* SyncVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncVC.m; sourceTree = "<group>"; };
 		A429EFCB9EBFCC3401587FFE /* Pods_QJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF00A12D602C4C694A31156D /* Pods_QJRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QJRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75EC456C84254D6DBE4B4D4 /* Pods-QJRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QJRouter_Tests.release.xcconfig"; path = "Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +243,8 @@
 				891E19B825CBA62900066744 /* PreLoadVC.m */,
 				89D14F4A25CCDD7E00333194 /* RNVC.h */,
 				89D14F4B25CCDD7E00333194 /* RNVC.m */,
+				89EF530825D213AC004CD539 /* SyncVC.h */,
+				89EF530925D213AC004CD539 /* SyncVC.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 		6003F593195388D20070C39A /* Example for QJRouter */ = {
 			isa = PBXGroup;
 			children = (
+				89EE025925E3A47E00277090 /* rndist */,
 				891E187525C0FCE300066744 /* Js */,
 				3C0D5C7F25BC4358006AE016 /* Gateway */,
 				3CF74F4225BC026900C6C848 /* Scene */,
@@ -350,6 +360,15 @@
 			name = Js;
 			sourceTree = "<group>";
 		};
+		89EE025925E3A47E00277090 /* rndist */ = {
+			isa = PBXGroup;
+			children = (
+				89EE026C25E3B44000277090 /* index.ios.jsbundle */,
+				89EE026825E3B37900277090 /* index.ios.456.jsbundle */,
+			);
+			name = rndist;
+			sourceTree = "<group>";
+		};
 		BB83949FED3DBF27D8A67181 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +432,7 @@
 				ORGANIZATIONNAME = jz;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
+						DevelopmentTeam = ZMX4C3B995;
 						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
@@ -449,9 +469,11 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				891E188525C104DD00066744 /* rule.txt in Resources */,
 				891E187D25C101D600066744 /* jmespath.js in Resources */,
+				89EE026925E3B37900277090 /* index.ios.456.jsbundle in Resources */,
 				891E188125C1049E00066744 /* rawdata.json in Resources */,
 				891E187925C0FDC500066744 /* t1.js in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				89EE026D25E3B44000277090 /* index.ios.jsbundle in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +614,7 @@
 				3CF74F3325BBFD3400C6C848 /* OpsTime.m in Sources */,
 				89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */,
 				3C0D5C9225BC46EB006AE016 /* UIViewController+Router.m in Sources */,
+				89EF530A25D213AC004CD539 /* SyncVC.m in Sources */,
 				3C0D5C9325BC46EB006AE016 /* NSObject+gmKey.m in Sources */,
 				6003F59E195388D20070C39A /* QJAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* QJViewController.m in Sources */,
@@ -728,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZMX4C3B995;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJExtension\"",
@@ -741,9 +764,9 @@
 				);
 				INFOPLIST_FILE = "QJRouter/QJRouter-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = shjson.top.qjrouter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.apns.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = BYYB_NEW_APNs_616;
 				SWIFT_VERSION = 4.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = app;
@@ -756,14 +779,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZMX4C3B995;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QJRouter/QJRouter-Prefix.pch";
 				INFOPLIST_FILE = "QJRouter/QJRouter-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = shjson.top.qjrouter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.apns.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = BYYB_NEW_APNs_616;
 				SWIFT_VERSION = 4.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = app;

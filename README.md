@@ -13,6 +13,9 @@ It's only a play demo, you should add more robust when used in production!!
 <img src="https://s3.ax1x.com/2021/02/05/y8EUHK.png" width="30%"/>
 
 ## Feature
+### 1.6.0
+- 🎉  集成上传，下载，SM3
+
 ### 1.5.0
 - 🎉  集成reactnative
 
