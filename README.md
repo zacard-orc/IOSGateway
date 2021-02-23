@@ -13,6 +13,12 @@ It's only a play demo, you should add more robust when used in production!!
 <img src="https://s3.ax1x.com/2021/02/05/y8EUHK.png" width="30%"/>
 
 ## Feature
+### 1.6.0
+- 🎉  集成上传，下载，SM3
+
+### 1.5.0
+- 🎉  集成reactnative
+
 ### 1.4.0
 - 🎉  增加WKWebview预加载能力
 - 🎉  增加WKWebview自动播放H5的能力
@@ -29,7 +35,7 @@ It's only a play demo, you should add more robust when used in production!!
 - 🎉  增加了对multi withObject的支持
 - 🎉  收敛网关，暴露相关api，以便支持审计、限流、打点等能力
 
-## Version 1.2.0
+## Version 1.5.0
 
 
 ## How to use
