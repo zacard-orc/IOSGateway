@@ -19,7 +19,7 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - MJExtension (3.2.1)
+  - MJExtension (3.2.4)
   - QJRouter (0.0.8):
     - MJExtension
   - RCTRequired (0.62.2)
@@ -343,7 +343,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 5465d51ccfeecb7faa12f9ae0024f2044ce4044e
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   QJRouter: 73581e6a983c66dc05ace6e2fc47d93222178a5f
   RCTRequired: cec6a34b3ac8a9915c37e7e4ad3aa74726ce4035
   RCTTypeSafety: 93006131180074cffa227a1075802c89a49dd4ce
