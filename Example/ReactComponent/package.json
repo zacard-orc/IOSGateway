@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint .",
     "sync": "cp ./dist/index.ios.jsbundle ../QJRouter/rndist/",
-    "build": "react-native bundle --entry-file index.tsx --bundle-output ./dist/index.ios.jsbundle --platform ios --assets-dest ./dist --dev false"
+    "build": "react-native bundle --entry-file index.tsx --bundle-output ./dist/index.ios.jsbundle --platform ios --assets-dest ./dist --dev false",
+    "detox-test-ios": "detox test --loglevel verbose --configuration ios.sim.debug --debug-synchronization 1000",
+    "detox-test-android": "detox test --loglevel verbose --configuration android.emu.debug --debug-synchronization 1000"
   },
   "dependencies": {
     "react": "16.13.1",
@@ -28,6 +30,7 @@
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-root-import": "^6.6.0",
+    "detox": "^18.6.2",
     "eslint": "^7.20.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",

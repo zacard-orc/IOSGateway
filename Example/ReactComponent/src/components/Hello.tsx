@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
   },
   greeting: {
-    color: '#999',
+    color: 'green',
     fontWeight: 'bold',
   },
 });
