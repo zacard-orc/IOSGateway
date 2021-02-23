@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="Merge branch 'main' of https://github.com/zacard-orc/IOSGateway into main&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Example/Podfile&#10;#&#9;Example/Podfile.lock&#10;#&#9;Example/Pods/Manifest.lock&#10;#&#9;Example/Pods/Pods.xcodeproj/project.pbxproj&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-frameworks.sh&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig&#10;#&#9;Example/QJRouter.xcodeproj/project.pbxproj&#10;#&#9;Example/ReactComponent/.gitignore&#10;#&#9;Example/ReactComponent/index.js&#10;#&#9;Example/ReactComponent/yarn.lock">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter.xcodeproj/xcshareddata/xcschemes/QJRouter-Example.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter.xcodeproj/xcshareddata/xcschemes/QJRouter-Example.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QJRouter/Images.xcassets/AppIcon.appiconset/位图@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QJRouter/Images.xcassets/AppIcon.appiconset/位图@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QJRouter/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,7 @@
       <workItem from="1612492036003" duration="350000" />
       <workItem from="1613970737349" duration="8047000" />
       <workItem from="1613986485314" duration="2157000" />
-      <workItem from="1614053773212" duration="2538000" />
+      <workItem from="1614053773212" duration="3847000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/zacard-orc/IOSGateway into main&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Example/Podfile&#10;#&#9;Example/Podfile.lock&#10;#&#9;Example/Pods/Manifest.lock&#10;#&#9;Example/Pods/Pods.xcodeproj/project.pbxproj&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-frameworks.sh&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig&#10;#&#9;Example/QJRouter.xcodeproj/project.pbxproj&#10;#&#9;Example/ReactComponent/.gitignore&#10;#&#9;Example/ReactComponent/index.js&#10;#&#9;Example/ReactComponent/yarn.lock">
       <created>1612491962880</created>

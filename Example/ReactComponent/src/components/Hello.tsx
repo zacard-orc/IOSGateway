@@ -22,7 +22,6 @@ const Hello: React.FC<Props> = (props) => {
   };
 
   const getExclamationMarks = (numChars: number) => {
-    console.log(numChars);
     return Array(numChars > 0 ? numChars + 1 : 0).join('!');
   };
   return (
