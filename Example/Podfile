@@ -35,7 +35,10 @@ target 'QJRouter_Example' do
   pod 'DoubleConversion', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/Folly.podspec'
+  
+#  pod 'react-native-video/VideoCaching', :path => '../ReactComponent/node_modules/react-native-video/react-native-video.podspec'
 
+  pod 'react-native-video', :path => './ReactComponent/node_modules/react-native-video/react-native-video.podspec'
   target 'QJRouter_Tests' do
     inherit! :search_paths    
   end

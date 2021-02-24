@@ -14,6 +14,11 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"RN直播";
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
+
 //    NSURL *url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
 //    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
 //

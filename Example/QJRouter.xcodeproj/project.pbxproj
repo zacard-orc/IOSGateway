@@ -48,6 +48,7 @@
 		89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D14F4B25CCDD7E00333194 /* RNVC.m */; };
 		89EE026925E3B37900277090 /* index.ios.456.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 89EE026825E3B37900277090 /* index.ios.456.jsbundle */; };
 		89EE026D25E3B44000277090 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 89EE026C25E3B44000277090 /* index.ios.jsbundle */; };
+		89EE038C25E512A800277090 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EE038B25E512A800277090 /* CalendarManager.m */; };
 		89EF530A25D213AC004CD539 /* SyncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF530925D213AC004CD539 /* SyncVC.m */; };
 		ED02F4BFC0D5835D26B14628 /* Pods_QJRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF00A12D602C4C694A31156D /* Pods_QJRouter_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +134,8 @@
 		89D14F4B25CCDD7E00333194 /* RNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNVC.m; sourceTree = "<group>"; };
 		89EE026825E3B37900277090 /* index.ios.456.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.456.jsbundle; path = rndist/index.ios.456.jsbundle; sourceTree = "<group>"; };
 		89EE026C25E3B44000277090 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.jsbundle; path = rndist/index.ios.jsbundle; sourceTree = "<group>"; };
+		89EE038A25E512A800277090 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		89EE038B25E512A800277090 /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		89EF530825D213AC004CD539 /* SyncVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncVC.h; sourceTree = "<group>"; };
 		89EF530925D213AC004CD539 /* SyncVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncVC.m; sourceTree = "<group>"; };
 		A429EFCB9EBFCC3401587FFE /* Pods_QJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +291,7 @@
 		6003F593195388D20070C39A /* Example for QJRouter */ = {
 			isa = PBXGroup;
 			children = (
+				89EE038925E5129200277090 /* rnapi */,
 				89EE025925E3A47E00277090 /* rndist */,
 				891E187525C0FCE300066744 /* Js */,
 				3C0D5C7F25BC4358006AE016 /* Gateway */,
@@ -367,6 +371,15 @@
 				89EE026825E3B37900277090 /* index.ios.456.jsbundle */,
 			);
 			name = rndist;
+			sourceTree = "<group>";
+		};
+		89EE038925E5129200277090 /* rnapi */ = {
+			isa = PBXGroup;
+			children = (
+				89EE038A25E512A800277090 /* CalendarManager.h */,
+				89EE038B25E512A800277090 /* CalendarManager.m */,
+			);
+			name = rnapi;
 			sourceTree = "<group>";
 		};
 		BB83949FED3DBF27D8A67181 /* Pods */ = {
@@ -615,6 +628,7 @@
 				89D14F4C25CCDD7E00333194 /* RNVC.m in Sources */,
 				3C0D5C9225BC46EB006AE016 /* UIViewController+Router.m in Sources */,
 				89EF530A25D213AC004CD539 /* SyncVC.m in Sources */,
+				89EE038C25E512A800277090 /* CalendarManager.m in Sources */,
 				3C0D5C9325BC46EB006AE016 /* NSObject+gmKey.m in Sources */,
 				6003F59E195388D20070C39A /* QJAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* QJViewController.m in Sources */,

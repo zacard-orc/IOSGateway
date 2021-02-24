@@ -1,7 +1,8 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, View} from 'react-native';
 
-import Hello, {Props} from '~/components/Hello';
+// import Hello, {Props} from '~/components/Hello';
+import Zhibo, {Props} from '~/scene/Zhibo';
 
 const RNDemo: React.FC<Props> = () => {
   const arg = {
@@ -9,8 +10,7 @@ const RNDemo: React.FC<Props> = () => {
   };
   return (
     <View style={styles.container}>
-      <Text>3333</Text>
-      <Hello {...arg} />
+      <Zhibo {...arg} />
     </View>
   );
 };
@@ -18,13 +18,16 @@ export default RNDemo;
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 100,
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 80,
     flex: 1,
-    maxHeight: 140,
-    backgroundColor: '#aaaaaa',
+    height: '100%',
+    // maxHeight: 640,
+    // backgroundColor: '#aaaaaa',
     borderRadius: 10,
+    borderColor: '#000',
+    borderWidth: 1,
   },
 });
 

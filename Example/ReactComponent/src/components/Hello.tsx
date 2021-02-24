@@ -7,6 +7,7 @@ import {
   View,
   Dimensions,
   PixelRatio,
+  NativeModules,
 } from 'react-native';
 
 const dp2px = (dp: number) => PixelRatio.getPixelSizeForLayoutSize(dp);
@@ -21,6 +22,8 @@ export interface Props {
   enthusiasmLevel?: number;
 }
 
+const CalendarManager = NativeModules.CalendarManager;
+
 const Hello: React.FC<Props> = (props) => {
   const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
     props.enthusiasmLevel,
@@ -33,6 +36,8 @@ const Hello: React.FC<Props> = (props) => {
     } else {
       setEnthusiasmLevel((enthusiasmLevel || 0) - 1);
     }
+    console.log(CalendarManager.firstDayOfTheWeek);
+    CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
   };
 
   const getExclamationMarks = (numChars: number) => {

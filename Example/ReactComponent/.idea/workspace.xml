@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../QJRouter/rndist/index.ios.jsbundle" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/rndist/index.ios.jsbundle" afterDir="false" />
+    <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="px ratio">
+      <change afterPath="$PROJECT_DIR$/../QJRouter/CalendarManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QJRouter/CalendarManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scene/Zhibo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.ios.jsbundle" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.ios.jsbundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -94,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612491962880</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="px ratio">
+      <created>1614076334028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614076334028</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'main' of https://github.com/zacard-orc/IOSGateway into main&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Example/Podfile&#10;#&#9;Example/Podfile.lock&#10;#&#9;Example/Pods/Manifest.lock&#10;#&#9;Example/Pods/Pods.xcodeproj/project.pbxproj&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-frameworks.sh&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig&#10;#&#9;Example/QJRouter.xcodeproj/project.pbxproj&#10;#&#9;Example/ReactComponent/.gitignore&#10;#&#9;Example/ReactComponent/index.js&#10;#&#9;Example/ReactComponent/yarn.lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/zacard-orc/IOSGateway into main&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Example/Podfile&#10;#&#9;Example/Podfile.lock&#10;#&#9;Example/Pods/Manifest.lock&#10;#&#9;Example/Pods/Pods.xcodeproj/project.pbxproj&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-frameworks.sh&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig&#10;#&#9;Example/QJRouter.xcodeproj/project.pbxproj&#10;#&#9;Example/ReactComponent/.gitignore&#10;#&#9;Example/ReactComponent/index.js&#10;#&#9;Example/ReactComponent/yarn.lock" />
+    <MESSAGE value="px ratio" />
+    <option name="LAST_COMMIT_MESSAGE" value="px ratio" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
