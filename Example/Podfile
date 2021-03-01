@@ -22,7 +22,8 @@ target 'QJRouter_Example' do
   pod 'React-RCTSettings', :path => './ReactComponent/node_modules/react-native/Libraries/Settings'
   pod 'React-RCTText', :path => './ReactComponent/node_modules/react-native/Libraries/Text'
   pod 'React-RCTVibration', :path => './ReactComponent/node_modules/react-native/Libraries/Vibration'
-  pod 'React-Core/RCTWebSocket', :path => './ReactComponent/node_modules/react-native/'
+#  pod 'React-Core/RCTWebSocket', :path => './ReactComponent/node_modules/react-native/'
+  pod 'React-Core/RCTWebSocket', :path => 'git://aaa.bb.com/FeNative/RCTWebSocket.git'
 
   pod 'React-cxxreact', :path => './ReactComponent/node_modules/react-native/ReactCommon/cxxreact'
   pod 'React-jsi', :path => './ReactComponent/node_modules/react-native/ReactCommon/jsi'

@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "sync": "cp ./dist/index.ios.jsbundle ../QJRouter/rndist/index.ios.jsbundle",
+    "sync": "cp -r ./dist/* ../QJRouter/rndist/",
     "build": "react-native bundle --entry-file index.tsx --bundle-output ./dist/index.ios.jsbundle --platform ios --assets-dest ./dist --dev false",
     "detox-test-ios": "detox test --loglevel verbose --configuration ios.sim.debug --debug-synchronization 1000",
     "detox-test-android": "detox test --loglevel verbose --configuration android.emu.debug --debug-synchronization 1000"

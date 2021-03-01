@@ -41,6 +41,11 @@ static int RN_BUNDLEID = 0;
     [_vv loadViewIfNeeded];
 //    [self.view addSubview:[[NiceMgr new] addImage]];
 //    [self.navigationController pushViewController:[ExpressVC new] animated:TRUE];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:
+                           CGRectMake(0, 0, 375, 44)];
+    titleLabel.text =@"IOSGateway";
+    self.navigationItem.titleView = titleLabel;
 }
 
 -(void)alert:(NSString*)msg{
@@ -57,7 +62,7 @@ static int RN_BUNDLEID = 0;
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return 16;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -92,6 +97,8 @@ static int RN_BUNDLEID = 0;
         cell.textLabel.text = @"⚛️ Scene： ReactNative 体验";
     } else if (indexPath.row == 14) {
         cell.textLabel.text = @"🎦 Scene： 数据同步体验";
+    } else if (indexPath.row == 15) {
+        cell.textLabel.text = @"🎦 Scene： Native视频";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"aaa-%ld",indexPath.row];
     }
@@ -244,16 +251,16 @@ static int RN_BUNDLEID = 0;
         
         NSURL *url;
         NSString *ssf;
-//        if(RN_BUNDLEID%2){
-//            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios.123"ofType:@"jsbundle"];
-//        } else{
-            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios"ofType:@"jsbundle"];
-//        }
+        if(RN_BUNDLEID%2){
+            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios.123"ofType:@"jsbundle"];
+        } else{
+            ssf =[[NSBundle mainBundle] pathForResource:@"index.ios.456"ofType:@"jsbundle"];
+        }
         
         NSLog(@"ssf => %@",ssf);
 
-//        NSString * jsBundlePath = NSHomeDirectory();
-//        NSLog(@"sanbox root path = %@",jsBundlePath);
+        NSString * jsBundlePath = NSHomeDirectory();
+        NSLog(@"sanbox root path = %@",jsBundlePath);
 
 //        url = [NSURL URLWithString:[jsBundlePath stringByAppendingString:@"/rndist/index.ios.bundle.123"]];
         
@@ -262,7 +269,7 @@ static int RN_BUNDLEID = 0;
 //        NSLog(@"sanbox root url = %@",url);
 
 
-        url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
+//        url = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios&dev=true"];
 //        NSURL *url = [NSURL URLWithString:@"http://172.30.139.50:8081/index.bundle?platform=ios&dev=true"];
 
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
@@ -275,6 +282,15 @@ static int RN_BUNDLEID = 0;
     } else if (indexPath.row == 14) {
         id vc = [QJRouter.sharedInstance
                  post:@"qj://scene/SyncVC/initvc"
+                 withParam:nil
+                 useCb:nil
+                 useCache:TRUE
+                 ];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 15) {
+        id vc = [QJRouter.sharedInstance
+                 post:@"qj://scene/VideoVc/initvc"
                  withParam:nil
                  useCb:nil
                  useCache:TRUE

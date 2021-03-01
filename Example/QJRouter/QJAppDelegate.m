@@ -16,6 +16,9 @@
 
 #import "Components/NiceMgr.h"
 
+#import "QJViewController.h"
+#import "QJNavi.h"
+
 #import "Scene/ExpressVC.h"
 #import "Scene/ItemListVC.h"
 #import "Scene/JmeVC.h"
@@ -25,6 +28,7 @@
 #import "Scene/PreLoadQQVC.h"
 #import "Scene/RNVC.h"
 #import "Scene/SyncVC.h"
+#import "Scene/VideoVc.h"
 
 
 #import <sys/time.h>
@@ -50,7 +54,14 @@
     printf("timeuse => %ld\n",timeuse);
     
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    QJViewController *qjvc = [[QJViewController alloc] init];
+    
+    QJNavi *navi=[[QJNavi alloc] initWithRootViewController:qjvc];
+
+    self.window.rootViewController = navi;
+    
 //    RNVC *rnvc = [[RNVC alloc] init];
 //    self.window.rootViewController = rnvc;
 //
@@ -58,7 +69,7 @@
 //    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url moduleName:@"RNDemo" initialProperties:nil launchOptions:nil];
 //    rnvc.view = rootView;
 //
-//    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
      
 
     // Override point for customization after application launch.
@@ -85,6 +96,7 @@
                NSStringFromClass([PreLoadQQVC class]),
                NSStringFromClass([RNVC class]),
                NSStringFromClass([SyncVC class]),
+               NSStringFromClass([VideoVc class]),
             ];
     return YES;
 }
