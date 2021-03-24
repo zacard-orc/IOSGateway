@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"RN直播";
+    self.navigationItem.title = @"RN体验";
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
@@ -77,7 +77,7 @@
                         [UIFont systemFontOfSize:16 weight:9],
                          NSForegroundColorAttributeName:linRGBA(254,204,69,1)
     }];
-    self.navigationItem.title = @"RN直播";
+    self.navigationItem.title = @"RN体验";
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 -(void)viewDidDisappear:(BOOL)animated{

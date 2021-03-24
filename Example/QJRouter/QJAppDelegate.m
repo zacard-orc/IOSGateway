@@ -34,6 +34,8 @@
 #import <sys/time.h>
 #include <math.h>
 
+#import "SSL/AESUtil.h"
+
 //#import <React/RCTRootView.h>
 //#import "RNVC.h"
 
@@ -43,6 +45,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    char keyPtr[kCCKeySizeAES256 + 1];
+    bzero(keyPtr, sizeof(keyPtr));
+    [@"hello123123123123" getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"=> test %@",[NSString stringWithUTF8String:keyPtr]);
+    printf("=> test %s\n",keyPtr);
     
     struct timeval start, end;
     long timeuse;
@@ -98,6 +107,10 @@
                NSStringFromClass([SyncVC class]),
                NSStringFromClass([VideoVc class]),
             ];
+    
+    NSString *entext = [AESUtil aesEncrypt:@"Hello"];
+    
+    NSLog(@"entext => %@",entext);
     return YES;
 }
 

@@ -45,6 +45,7 @@
 		891E19B925CBA62900066744 /* PreLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891E19B825CBA62900066744 /* PreLoadVC.m */; };
 		892E732325ECABB00053A3C3 /* index.ios.456.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 892E732125ECABB00053A3C3 /* index.ios.456.jsbundle */; };
 		892E732425ECABB00053A3C3 /* index.ios.123.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 892E732225ECABB00053A3C3 /* index.ios.123.jsbundle */; };
+		89826BFA25F06F1000D00CFD /* AESUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 89826BF925F06F1000D00CFD /* AESUtil.m */; };
 		89879B6025E8D43600490A65 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 89879B5F25E8D43600490A65 /* heart.png */; };
 		89A945EC25E73F1C000D222E /* heart_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A945DC25E73F1C000D222E /* heart_4.png */; };
 		89A945ED25E73F1C000D222E /* heart_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A945DD25E73F1C000D222E /* heart_3.png */; };
@@ -151,6 +152,8 @@
 		891E19B825CBA62900066744 /* PreLoadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreLoadVC.m; sourceTree = "<group>"; };
 		892E732125ECABB00053A3C3 /* index.ios.456.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.456.jsbundle; path = rndist/index.ios.456.jsbundle; sourceTree = "<group>"; };
 		892E732225ECABB00053A3C3 /* index.ios.123.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.123.jsbundle; path = rndist/index.ios.123.jsbundle; sourceTree = "<group>"; };
+		89826BF825F06F1000D00CFD /* AESUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESUtil.h; sourceTree = "<group>"; };
+		89826BF925F06F1000D00CFD /* AESUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESUtil.m; sourceTree = "<group>"; };
 		89879B5F25E8D43600490A65 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		89A945DC25E73F1C000D222E /* heart_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_4.png; sourceTree = "<group>"; };
 		89A945DD25E73F1C000D222E /* heart_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_3.png; sourceTree = "<group>"; };
@@ -347,6 +350,7 @@
 		6003F593195388D20070C39A /* Example for QJRouter */ = {
 			isa = PBXGroup;
 			children = (
+				89826BF525F06E0900D00CFD /* SSL */,
 				89879B5F25E8D43600490A65 /* heart.png */,
 				89A9477425E8C0C4000D222E /* test1.mp4 */,
 				89EE038925E5129200277090 /* rnapi */,
@@ -422,6 +426,15 @@
 				891E188425C104DD00066744 /* rule.txt */,
 			);
 			name = Js;
+			sourceTree = "<group>";
+		};
+		89826BF525F06E0900D00CFD /* SSL */ = {
+			isa = PBXGroup;
+			children = (
+				89826BF825F06F1000D00CFD /* AESUtil.h */,
+				89826BF925F06F1000D00CFD /* AESUtil.m */,
+			);
+			path = SSL;
 			sourceTree = "<group>";
 		};
 		89A945D825E73F1C000D222E /* assets */ = {
@@ -755,6 +768,7 @@
 				3CF74F3B25BBFF0900C6C848 /* UserInfo.m in Sources */,
 				89D14F2125CBEB3500333194 /* PreLoadDoubanVC.m in Sources */,
 				891E186E25C0F90800066744 /* JmeVC.m in Sources */,
+				89826BFA25F06F1000D00CFD /* AESUtil.m in Sources */,
 				3C0D5C9025BC46EB006AE016 /* Target_commons.m in Sources */,
 				891E19B925CBA62900066744 /* PreLoadVC.m in Sources */,
 				89D14F2625CBEE6E00333194 /* PreLoadQQVC.m in Sources */,
