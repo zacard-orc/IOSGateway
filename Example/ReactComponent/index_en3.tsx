@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 
 import Hello, {Props} from '~/components/Hello/Hello';
-// import Zhibo, {Props} from '~/scene/Zhibo';
 
 const deviceWidth = Dimensions.get('window').width; //设备的宽度
 const deviceHeight = Dimensions.get('window').height; //设备的高度
@@ -26,10 +25,7 @@ const RNDemo: React.FC<Props> = () => {
   };
   return (
     <View style={styles.container}>
-      <View style={styles.mockV1}>
-        <Text>这是版本2.0.0</Text>
-        <Text>发布时间 2021.02.28 21:43:00</Text>
-      </View>
+      <Hello name="ccc_en3"/>
     </View>
   );
 };

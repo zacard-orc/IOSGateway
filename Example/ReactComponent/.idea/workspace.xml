@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba6a7d5-261e-4a6a-abfe-28dacc64e07e" name="Default Changelist" comment="px ratio">
-      <change afterPath="$PROJECT_DIR$/../QJRouter/SSL/AESUtil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QJRouter/SSL/AESUtil.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hello.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rn.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter/QJAppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/QJAppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter/QJViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/QJViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QJRouter/Scene/RNVC.m" beforeDir="false" afterPath="$PROJECT_DIR$/../QJRouter/Scene/RNVC.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_en2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_en3.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_withsb.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/JButton/JButton.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/JButton/JButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/JButton/stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hello.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello/Hello.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello/Hello.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hello/stories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scene/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,11 +61,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/scene/assets" />
       <recent name="$PROJECT_DIR$/play" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Hello" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -100,7 +102,7 @@
       <workItem from="1614053773212" duration="3847000" />
       <workItem from="1614216953062" duration="11363000" />
       <workItem from="1614566558465" duration="1031000" />
-      <workItem from="1616550570342" duration="3648000" />
+      <workItem from="1616550570342" duration="6243000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/zacard-orc/IOSGateway into main&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;Example/Podfile&#10;#&#9;Example/Podfile.lock&#10;#&#9;Example/Pods/Manifest.lock&#10;#&#9;Example/Pods/Pods.xcodeproj/project.pbxproj&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.markdown&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-acknowledgements.plist&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example-frameworks.sh&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Example/Pods-QJRouter_Example.release.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.debug.xcconfig&#10;#&#9;Example/Pods/Target Support Files/Pods-QJRouter_Tests/Pods-QJRouter_Tests.release.xcconfig&#10;#&#9;Example/QJRouter.xcodeproj/project.pbxproj&#10;#&#9;Example/ReactComponent/.gitignore&#10;#&#9;Example/ReactComponent/index.js&#10;#&#9;Example/ReactComponent/yarn.lock">
       <created>1612491962880</created>
